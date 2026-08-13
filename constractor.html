@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script >
+        class Game{
+
+ constructor(Enemy_healt,player_healt){
+
+    this.Enemy_healt=Enemy_healt;
+    this.player_healt=player_healt;
+}
+
+Game_Enemy(){
+
+    if(this.Enemy_healt>=100){
+
+        console.log("Enemy Eliminited");
+    }
+    else 
+     console.log("Enemy healt="+this.Enemy_healt)
+}
+
+Game_playe_Demage(){
+
+    if(this.player_healt==100){
+
+        console.log("player number one is Eliminited");
+    }
+
+
+}
+
+Game_player_healt(){
+
+    if(this.player_healt==100){
+
+        console.log("player number one is Eliminited");
+    }
+    else 
+     console.log("Player health:"+this.player_healt);
+}
+}
+
+
+
+let Game_class_Activition=new Game(100,50);
+Game_class_Activition.Game_Enemy();
+Game_class_Activition.Game_playe_Demage();
+Game_class_Activition.Game_player_healt();
+    </script>
+</body>
+</html>
