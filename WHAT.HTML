@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WhatsApp Clone</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial;
+}
+
+body{
+    height:100vh;
+}
+
+.app{
+    display:flex;
+    height:100vh;
+}
+
+/* LEFT PANEL */
+.sidebar{
+    width:30%;
+    background:#111b21;
+    color:white;
+    display:flex;
+    flex-direction:column;
+}
+
+.header{
+    padding:15px;
+    background:#202c33;
+    font-size:20px;
+    text-align:center;
+}
+
+.search{
+    padding:10px;
+    border:none;
+    outline:none;
+    width:100%;
+}
+
+.chat-list{
+    flex:1;
+    overflow-y:auto;
+}
+
+.chat{
+    padding:15px;
+    cursor:pointer;
+    border-bottom:1px solid #333;
+}
+
+.chat:hover{
+    background:#2a3942;
+}
+
+.active{
+    background:#2a3942;
+}
+
+/* RIGHT PANEL */
+.main{
+    width:70%;
+    background:#0b141a;
+    display:flex;
+    flex-direction:column;
+}
+
+.chat-header{
+    padding:15px;
+    background:#202c33;
+    color:white;
+}
+
+.messages{
+    flex:1;
+    padding:15px;
+    overflow-y:auto;
+}
+
+.msg{
+    margin:5px 0;
+    padding:8px 12px;
+    border-radius:8px;
+    max-width:60%;
+}
+
+.me{
+    background:#005c4b;
+    color:white;
+    margin-left:auto;
+}
+
+.other{
+    background:#2a3942;
+    color:white;
+}
+
+.input-box{
+    display:flex;
+    padding:10px;
+    background:#202c33;
+}
+
+.input-box input{
+    flex:1;
+    padding:10px;
+    border:none;
+    outline:none;
+}
+
+.input-box button{
+    padding:10px 15px;
+    background:#00a884;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- LEFT -->
+    <div class="sidebar">
+        <div class="header">WhatsApp Clone</div>
+        <input class="search" placeholder="Search chat..." onkeyup="searchChat(this.value)">
+        <div class="chat-list" id="chatList"></div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="main">
+        <div class="chat-header" id="chatName">Select a chat</div>
+        <div class="messages" id="messages"></div>
+
+        <div class="input-box">
+            <input id="msgInput" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendMsg()">
+            <button onclick="sendMsg()">Send</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+let chats = JSON.parse(localStorage.getItem("chats")) || {
+    Ali: [],
+    Ahmad: [],
+    Sara: [],
+    g:[],
+    
+};
+
+let currentChat = null;
+
+// Load chat list
+function loadChats(){
+    let list = document.getElementById("chatList");
+    list.innerHTML = "";
+
+    for(let name in chats){
+        let div = document.createElement("div");
+        div.className = "chat";
+        div.innerText = name;
+        div.onclick = ()=>openChat(name);
+        list.appendChild(div);
+    }
+}
+
+loadChats();
+
+// Open chat
+function openChat(name){
+    currentChat = name;
+    document.getElementById("chatName").innerText = name;
+    renderMessages();
+}
+
+// Show messages
+function renderMessages(){
+    let box = document.getElementById("messages");
+    box.innerHTML = "";
+
+    chats[currentChat].forEach(msg=>{
+        let div = document.createElement("div");
+        div.className = "msg " + msg.type;
+        div.innerText = msg.text;
+        box.appendChild(div);
+    });
+
+    box.scrollTop = box.scrollHeight;
+}
+
+// Send message
+function sendMsg(){
+    if(!currentChat) return alert("Select chat first!");
+
+    let input = document.getElementById("msgInput");
+    let text = input.value.trim();
+    if(text==="") return;
+
+    chats[currentChat].push({text:text, type:"me"});
+    input.value = "";
+    save();
+    renderMessages();
+}
+
+// Save to local storage
+function save(){
+    localStorage.setItem("chats", JSON.stringify(chats));
+}
+
+// Search chat
+function searchChat(value){
+    let chatsDOM = document.querySelectorAll(".chat");
+    chatsDOM.forEach(chat=>{
+        chat.style.display = chat.innerText.toLowerCase().includes(value.toLowerCase())
+        ? "block" : "none";
+    });
+}
+
+</script>
+
+</body>
+</html>

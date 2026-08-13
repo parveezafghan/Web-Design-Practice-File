@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/webfonts/fa-brands-400.woff2">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing:border;
+        }
+        body{
+
+            background-color:#efefef;
+            color: #252522;
+        }
+
+        nav{
+
+            width:100%;
+            height:60px;
+            display: flex;
+            align-items: center; 
+            justify-content: space-between;
+            background-color:#fff;
+            box-sizing:0 1px 8px rgba(0,0,0,0.3);
+            position: fixed;
+            z-index:1000;
+            top:0;
+        }
+        .left_side{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left:16px;
+
+        }
+
+        .left_side .logo{
+            width: 40px;
+            
+            margin:4px 8px;
+            cursor: pointer;
+            border-radius:50%;
+        } 
+        .left_side .logo img{
+
+            width:100%; 
+            
+            border:50%;
+            height:8vh;
+            border-radius:50%;
+        }
+
+        .left_side .search-box{
+
+            width:230px;
+            height:40px;
+            background-color:#efefef;
+            border-radius:20px;
+            margin-left: 2px;
+            padding: 0 8px;
+            position: relative ;
+        }
+       
+       
+        form{
+            width:100%;
+             height:100%;
+        }
+
+        input {
+
+            /* margin-top:10px; */
+             background-color:#efefef;
+            border: none;
+            width:80%;
+            height:90%;
+           list-style: none;
+           border-radius:30%;
+        
+            /* border:2px solid red;  */
+
+        }
+        input:hover{
+
+           border-radius:10px;
+        }
+        button{
+
+            border: none;
+            border-radius:10px;
+            /* background-color: palegreen; */
+            width:20px;
+            
+        }
+
+        button i{
+
+            padding-top:10px;
+            font-size:20px;
+        }
+        .right-side{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .right-side img{
+
+           width:40px;
+           height:40px;
+           object-fit: cover;
+           line-height: 46px;
+           margin-right: 16;
+           margin-left: 8px;
+           border-radius:50%;
+           cursor: pointer;
+        }
+        .right-side i{
+
+            background-color:#efefef;
+            width:40px;
+            height:40px;
+            border-radius:50%;
+            margin-left:8px;
+            font-size:22px;
+            padding-top:15px;
+
+        }
+
+        .center_side a{
+
+            padding-right:50px;
+        }
+        .center_side a i{
+
+            font-size:25px;
+        }
+        .center_side .fa-house-circle-check{
+
+            color:rgb(156, 217, 156);
+            position:relative;
+        }
+        .center_side .fa-house-circle-check::after{
+
+            width:100%;
+            content:"";
+            background:rgb(156, 217, 156);
+            position: absolute;
+            height:2px;
+            bottom:-6px;
+            left:8px;
+        }
+        .center_side a i:hover{
+
+            background:#efefef;
+            
+        }
+
+        @media screen and (max-width:800px) {
+            
+            nav{
+
+                display: block;
+
+                height:200px;
+                
+            }
+            .center_side{
+
+
+                padding-left:200px;
+              
+            }
+            a {
+
+                padding-top: 50px;
+            }
+            .img{
+                padding-top: 50px;
+            }
+             .left_side{
+
+                    padding-bottom: 20px;
+            }
+
+            .right-side{
+
+                gap:40px;
+            }
+
+            @media screen and (max-width:540px){
+
+                .center_side{
+
+                  
+                    display: flex;
+                    justify-content: start;
+                    padding-left:0;
+
+                    
+                }
+                A {
+
+                    /* padding-left:60px; */
+                    /* padding-top:15px; */
+                    padding-left: 50px;
+                    padding-right:30px;
+
+                    
+                }
+                a{
+                    padding-top:10px;
+                }
+                .img{
+                    padding-top:20px;
+                    width:2%;
+                }
+
+               
+
+               
+            }
+            
+           
+        }
+
+
+
+        /* Drop Down meanu*/
+
+        .card{
+            position:absolute;
+            top: 100%;
+            right:20px;
+            max-height:0px;
+            overflow: hidden;
+            border:2px solid rebeccapurple;
+            /* display: flex;
+            justify-content: center;
+             */
+        }
+
+        .open_menu{
+
+            max-width:400px;
+        }
+
+
+        .card_m{
+
+            width: 330px;
+            background-color:#fff;
+            border-radius: 14px;
+            padding: 14px;
+        }
+
+
+    .card_item{
+      /* display: flex;
+      justify-content: center;
+      text-decoration: none; */
+
+      padding-left:35%;
+
+    }
+    .card_item:hover{
+        background-color:#efefef;
+        border-radius:25px;
+    }
+
+
+    .profile_m{
+
+        display: flex;
+        justify-content: center;
+        border-radius:10px;
+        box-shadow:2px 0 5px rgba(0,0,0,0.3);
+        padding-top:5px;
+
+    }
+
+
+    .card_item{
+
+        padding-top:10px;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    P{
+        /* padding-block:50px; */
+        padding-inline:50px;
+    }
+
+    #Profile_name{
+        padding-top:10px;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-style: oblique;
+    }
+    #img_top{
+        padding-bottom:5px;
+    }
+
+    /* #a_item{
+        padding-left:10px;
+        border: 2px solid rebeccapurple;
+    } */
+
+
+    /* #a_item_1{
+        border:2px solid rebeccapurple;
+        
+    } */
+      
+      
+
+       
+
+
+    </style>
+</head>
+<body>
+
+
+     
+    <div class="container">
+        <button onclick="open()">show data</button>
+        <p>this isf dfsdfsadfsdfsf</p>
+        <nav>
+            <div class="left_side">
+                <div class="logo">
+                    <!-- <img src="/App.jpg.png" alt="Error"> -->
+                     <img src="/AFGHAN_logo.jpg.png" alt="" width="2%">
+                </div>
+                <div class="search-box">
+                    
+                    <form action="">
+                        <input type="search" placeholder="Search in the World" class="input">
+                        <button class="button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="center_side">
+                 
+                <a id="A" href=""><i id="f" class="fa-solid fa-house-circle-check "  ></i></a>
+                <a id="A" href="/Benard.html"><i id="f" class="fa-solid fa-circle-play"></i></a>
+                <a id="A" href="/Form.html"><i id="f" class="fa-solid fa-user-group"></i></a>
+                 <a id="A" href="/full_validation_form.html"><i id="f" class="fa-solid fa-bell-slash"></i></a>
+                <!-- <a href=""></a> -->
+            </div>
+            <div class="right-side">
+                <a href=""><i id="f" class="fa-solid fa-gear"></i></a>
+                <a href=""><i id="f" class="fa-brands fa-facebook-messenger"></i></a>
+                <a href=""><i id="f" class="fa-solid fa-bell-slash"></i></a>
+                <!-- <a href=""><i id="f" class="fa-solid fa-user"></i></a> -->
+                 <!-- <img src="/App.jpg.png" alt="Erro"> -->
+                  <img class="img" src="/p.jpg.png" alt="" onclick="open()">
+
+                 <div class="card" id="card_show" style="border: 2px solid red;">
+                    <div class="card_m">
+
+                        <div class="profile_m">
+                            <img src="/AFGHAN_logo.jpg.png" id="img_top" alt="" class="P">
+                            <p class="P" id="Profile_name">Parveez AFGHAN</p>
+                        </div>
+                      
+                        <div class="card_item">
+                            <a id="a_item" href=""><i id="f" class="fa-solid fa-gear"></i> <small> Bussness Status </small></a>
+                        </div>
+
+
+                         <div class="card_item">
+                            <a id="a_item_1" href=""> <i id="f" class="fa-solid fa-gear"></i> <small> setting </small> </a>
+                        </div>
+
+                         <div class="card_item">
+                            <a id="a_item" href=""> <i id="f" class="fa-solid fa-gear"></i>  <small> Give Feedback </small> </a>
+                        </div>
+
+                         <div class="card_item">
+                            <a id="a_item" href=""><i id="f" class="fa-solid fa-gear"></i> <small> Logout  </small> </a>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </nav>
+    </div>
+
+
+    
+    <script>
+
+        let show=document.getElementById("card_show")
+
+        function open(){
+
+
+            show.classList.toggle("open_menu");
+            
+            
+        }
+       
+    </script>
+    
+</body>
+</html>
