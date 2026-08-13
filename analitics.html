@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="bootstrap.css">
+  
+     <script src="chart.umd.js"></script>
+    <style>
+        body
+    {
+        background: #efefef;;
+    }
+
+
+     .barchart{
+
+            width: 600px;
+            height:600px;
+        }
+
+        .ra{
+
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+           <div class="col-md-4"  style="margin-top:100px;">
+
+             <div class="row ra" style="width:250px;height:120px;background:white;margin-left:10px;">
+                <div style="margin-top:30px;" class="col-6"> <small style="font-size:1tpx;font-weight:bold;" >Total Balance </small> <small style="font-size: 15px;font-weight: bold;">1000</small> </div>
+                <div class="col-6"><img style="margin-top:10px;" src="/Money_image.jpg" width="50%" alt=""></div>
+             </div>
+           </div>
+            <div class="col-md-4"  style="margin-top:100px;">
+
+             <div class="row ra" style="width:250px;height:120px;background:white;margin-left:10px;">
+                <div style="margin-top:30px;" class="col-6"> <small style="font-size:13px;font-weight:bold;" >Total Widthraw </small> <small style="font-size: 15px;font-weight: bold;">1000</small> </div>
+                <div class="col-6"><img style="margin-top:10px;" src="/Money_image.jpg" width="50%" alt=""></div>
+             </div>
+           </div>
+            <div class="col-md-4"  style="margin-top:100px;">
+
+             <div class="row ra" style="width:250px;height:120px;background:white;margin-left:10px;">
+                <div style="margin-top:30px;" class="col-6"> <small style="font-size:1tpx;font-weight:bold;" >Total Deposite </small>  <small style="font-size: 15px;font-weight: bold;">1000</small> </div>
+                <div class="col-6"><img style="margin-top:10px;" src="/Money_image.jpg" width="50%" alt=""></div>
+             </div>
+           </div>
+
+           <div class="col-md-4"  style="margin-top:100px;">
+
+             <div class="row ra" style="width:250px;height:120px;background:white;margin-left:10px;">
+                <div style="margin-top:30px;" class="col-6"> <small style="font-size:1tpx;font-weight:bold;" >Total check </small> <small style="font-size: 15px;font-weight: bold;">1000</small> </div>
+                <div class="col-6"><img style="margin-top:10px;" src="/Money_image.jpg" width="50%" alt=""></div>
+             </div>
+           </div>
+
+           <div class="col-md-4"  style="margin-top:100px;">
+
+             <div class="row ra" style="width:250px;height:120px;background:white;margin-left:10px;">
+                <div style="margin-top:30px;" class="col-6"> <small style="font-size:1tpx;font-weight:bold;" >Total Account </small> <small style="font-size: 15px;font-weight: bold;">3000</small> </div>
+                <div class="col-6"><img style="margin-top:10px;" src="/Money_image.jpg" width="50%" alt=""></div>
+             </div>
+           </div>
+
+           <div class="col-md-4"  style="margin-top:100px;">
+
+             <div class="row ra" style="width:250px;height:120px;background:white;margin-left:10px;">
+                <div style="margin-top:30px;" class="col-6"> <small style="font-size:1tpx;font-weight:bold;" >Total Card </small>  <small style="font-size: 15px;font-weight: bold;">1000</small> </div>
+                <div class="col-6"><img style="margin-top:10px;" src="/Money_image.jpg" width="50%" alt=""></div>
+             </div>
+           </div>
+
+          
+
+          
+        </div>
+    </div>
+
+
+    <div class="container-fluid" style="margin-top:100px;">
+        <div class="row">
+            <div class="col-md-6">
+                 <div class="barchart" style="width:300px;height:300px;">
+                  <canvas id="barChart" width="300px" height="100px"></canvas>
+                 </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="barchart">
+                   <canvas id="barChart2" width="300px" height="100px"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+          let bb=document.getElementById('barChart');
+
+
+
+    //    const month=['jan','feb',"Mar","Apr","May"];
+    //    const deposit=[109,209,309,409,599];
+    //    const widthraw=[400,200,300,404,500];
+    //    const check=[100,200,200,200,200];
+
+    //    new Chart(bb,{
+
+    //     type:'line',
+    //     data:{
+    //         labels:month,
+    //         datasets:[
+    //             {
+    //                 label:"Deposit",
+    //                 data:deposit,
+    //                 borderWidth:2,
+    //                 tension:0.4
+    //             },
+
+    //             {
+    //                 label:"widthraw",
+    //                 data:widthraw,
+    //                 borderWidth:2,
+    //                 tension:0.4
+    //             },
+
+    //             {
+    //                 label:"check",
+    //                 data:check,
+    //                 borderWidth:2,
+    //                 tension:0.4
+    //             },
+    //         ]
+    //     },
+
+    //     option:{
+    //         responsive:true,
+    //         scales:{
+    //             y:{
+    //                 beginAtZero:true,
+    //             }
+    //         }
+    //     }
+    //    })
+
+    //    let bbb=document.getElementById('barChart1');
+
+    //    const data={
+    //     labels:["Deposite","Widthraw","check"],
+    //     datasets:[{
+    //         data:[500,2000,3000],
+    //     }]
+    //    };
+
+
+
+        let bbb=document.getElementById('barChart');
+
+       const data={
+        labels:["Total","Deposite","Widthraw","check","Account","Card"],
+        datasets:[{
+            data:[1200,500,2000,3000,100,150],
+        }]
+       };
+
+
+
+       new Chart(bbb,{
+
+        type:'pie',
+        data:data,
+        option:{
+
+            responsive:true
+
+        }
+       });
+
+
+        let bbbb=document.getElementById('barChart2');
+
+        const label=["Total","Deposit","widthraw",'check',"Account","Card"];
+
+        const totaldata=[1200,5000,2000,3000,100,150];
+
+        const count=[1200,5000,2000];
+
+        new Chart(bbbb,{
+
+            type:'bar',
+            data:{
+                labels:label,
+                datasets:[
+                    {
+                        label:"Total Amount",
+                        data:totaldata,
+                        borderWidth:1,
+                        barPercentage:1,
+                        categoryPercentage:0.5
+                    },
+
+                    {
+                        label:"Count",
+                        data:count,
+                        borderWidth:1,
+                        barPercentage:0.5,
+                        categoryPercentage:0.5
+                    },
+
+                ]
+            },
+
+            Option:{
+
+                responsive:true,
+                scales:{
+                    y:{
+                        beginAtZero:true,
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

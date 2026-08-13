@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/all.css">
+    <style>
+       
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:whitesmoke;
+        }
+
+        .navbar{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color:#003366; */
+            background:#fff;
+            padding: 15px 30px;
+            color: black;
+            box-shadow:2px 2px 4px rgb(239, 233, 223);
+
+        }
+
+        .logo{
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links ul{
+            list-style: none;
+            display: flex;
+
+        }
+
+        .nav-links ul li{
+            padding-left:25px;
+
+        }
+
+        .nav-links ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+
+        }
+
+        .menu-toggle{
+
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+
+        @media (max-width:768px){
+
+            .nav-links{
+
+                position:absolute;
+                top: 60px;
+                right:0;
+                /* background-color:#003366; */
+                background:#fff;
+                box-shadow:2px 2px 4px rgb(239, 233, 223);
+                width:100%;
+                display: none;
+                text-align: center;
+            }
+            .nav-links ul{
+
+                margin: 15px 0;
+
+            }
+
+            .menu-toggle{
+                display:block;
+            }
+        }
+
+        
+
+        
+        .container{
+
+            display: flex;
+            justify-content:space-between;
+            /* background-color:#fefefe; */
+             /* background-color:#efefef; */
+             background: #fff;
+              box-shadow:2px 2px 4px rgb(239, 233, 223);
+              height:50px;
+        }
+        ul{
+
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+        li{
+
+            /* padding-right:100px; */
+            padding-left:100px;
+            padding-top:15px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .A{
+
+            font-size:larger;
+           
+
+        }
+        
+        .H{
+
+            padding-top:15px;
+            padding-left:70px;
+        }
+
+        /* Body part */
+        .container_1{
+
+            display: flex;
+        }
+        .side_1{
+
+            padding:100px;
+            width:50%;
+            
+        }
+        h2{
+            font-size: xx-large;
+            color:rgb(131, 131, 230);
+            /* padding-inline:30px;  */
+            padding-bottom:20px
+
+        }
+        h1{
+            font-size: xx-large;
+            color:rgb(135, 119, 119);
+             padding-bottom:20px;
+
+            
+        }
+        .Sing{
+
+            border:1px solid rebeccapurple;
+            width:150px;
+            height:30px;
+            margin-top:20px;
+            background:palegreen;
+            border-radius:15px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       p{
+        font-size: large;
+       }
+
+       .side_2{
+
+        width:50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right:100px;
+        /* border:1px solid rebeccapurple; */
+       }
+       img{
+        box-shadow:1px 0 4px #fff;
+       }
+       .img{
+
+        height:65vh;
+        width:90%;
+        border-radius:10px;
+       }
+
+       .bold{
+        font-weight: bold
+       }
+
+      
+
+       .container_2{
+
+        display: flex;
+        width:100%;
+        background:#fff;
+        margin-top:10px;
+        padding-top:100px;
+       }
+
+
+       .side_11{
+
+         width:50%;
+       }
+
+       .side_22{
+        width:50%;
+        padding-top:30px;
+       }
+       
+
+       .container_3{
+
+        display: flex;
+        width:100%;
+        background:#fff;
+       }
+
+
+       .Side_1_1{
+
+        width:50%;
+       }
+
+       .Side_2_2{
+        width:50%;
+       }
+       #H3{
+
+        padding-left:20%;
+        padding-top:100px;
+        padding-bottom:10px;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+       }
+       #P{
+
+        /* padding-top:100px; */
+        font-size: large;
+        /* font-family: Arial, Helvetica, sans-serif; */
+        /* font-weight: bold; */
+       }
+
+
+       .container_4{
+        display: flex;
+        width:100%;
+        justify-content:space-evenly;
+       }
+
+
+       .Box{
+         
+        width:20%;
+        height:200px;
+        margin-top:20px;
+        padding-left:50px;
+        margin-left:10px;
+        padding-top:40px;
+        background:#fff;
+        border-radius:10px;
+        box-shadow: 1px 1px 1px white;
+       }
+       .Box:hover{
+
+        transition: all 1.1s ease-in-out;
+        /* height:250; */
+
+        margin-left:50px;
+        margin-top:-10px;
+       }
+
+       .box_img{
+
+        width:20%;
+        height:60px;
+        border-radius:50%;
+       }
+
+       .H3_class{
+        width:100%;
+        display: flex;
+        justify-content: center;
+       }
+
+       #H{
+
+        padding-top:50px;
+       }
+
+       .container_5{
+        width:100%;
+         display: flex;
+         justify-content: center;
+         margin-top:50px;
+         background:#fff;
+         height:50vh;
+       }
+
+       .pp{
+
+        /* padding-top:10px; */
+        /* margin-top:10px; */
+        /* margin-bottom:10px; */
+        /* padding-right:50px; */
+        /* font-weight: bold; */
+       }
+
+       .putter{
+
+        padding-top:60px;
+    
+         
+
+       }
+       
+       .small{
+
+        padding-left:50%;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    
+       }
+
+       .HHH{
+
+        padding-top:30px;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+       }
+       
+       #pad{
+
+        margin-left:100px;
+       }
+
+       .small_space{
+
+        margin-left:20px;
+       }
+
+       .button{
+
+        /* border: none; */
+        /* border-radius:10px; */
+
+        height:50px;
+        width:150px;
+        color:white;
+        border-radius:10px;
+        background:rebeccapurple;
+       }
+       .button:hover{
+        transition: all 1.15s ease-in-out;
+        background: rgb(171, 130, 211);
+        color:rgb(59, 43, 43);
+        width:200px;
+        border-radius:30px;
+       }
+       
+    </style>
+</head>
+<body>
+
+
+    
+    <div class="navbar">
+
+        <div class="log">
+            AFGHAN Bank
+        </div>
+
+
+        <div class="menu-toggle" onclick="togglem()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+
+        <div class="nav-links" id="nav-links">
+
+            <ul>
+                <li><a href="/Bank_home.html">Home</a></li>
+                 <li><a href="/Bank_about.html">About</a></li>
+                  <li><a href="/Bank_services.html">Services</a></li>
+                   <li><a href="/Bank_contact.html">contact us</a></li>
+                    <li><a href="/Bank_login.html">Login</a></li>
+                    <li><a href="/Bank_admin.html">Admin</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- <div class="container">
+
+        <div class="H"><h4 style="color:rgb(113, 113, 224);font-size: x-large;font-family: Arial, Helvetica, sans-serif;font-weight: bold;">AFGHAN Bank</h4></div>
+
+        <div>
+            <ul>
+                <li><a href="/Bank_home.html" class="A bold">Home</a></li>
+                <li><a href="/Bank_about.html" class="A bold">About</a></li>
+                <li><a href="/Bank_services.html" class="A bold">Services</a></li>
+                <li><a href="/Bank_contact.html" class="A bold"  >contact us</a></li>
+                <li style="font-size: x-large;" id="AA bold"   ><a href="/Bank_login.html" id="A" class="A bold"  style="font-size:x-large;">Login</a></li>
+                <li style="padding-right:30px;"><a href="/Bank_admin.html" class="A bold" style="font-size:x-large;">Admin</a></li>
+            </ul>
+        </div>
+    </div> -->
+
+    
+    <div class="container_1">
+        <div class="side_1">
+
+            <div class="">
+                <h3>About Us </h3>
+                <p>afghan Bank is trusted financial insitution dedicated to providing secure reliable and modern  banking services to individuals and Businesses . Our mission is to support econmic growth </p>
+            </div>
+
+            
+             <!-- <h2>Online</h2> -->
+            <!-- <h1>Banking</h1> -->
+            <!-- <p>Your Are Provide Better Transication and payment</p> -->
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aliquam minus nam! Esse facilis officiis quasi, eos </p>
+            <div class="Sing"><a href="" class="a_tag">SING IN</a></div>  -->
+
+        </div>
+        <div class="side_2" style="padding-top:30px;">
+
+            <img src="/image/side_1_img.jpg" alt="" class="img">
+            <!-- <img src="/BBBB.jpg" alt="" > -->
+        </div>
+    </div>
+
+
+    <div class="container_2">
+
+        <div class="side_11">
+            <img src="/image/Side_2_img.jpg" alt="" class="img">
+        </div>
+
+        <div class="side_22">
+            <h2>our Mission Helping Milions of organizations Grow Better</h2>
+            <p>Our AFGHAN Bank,s mission is to provide safe realiable, and modern finaancial services to all our customers <br>
+             We are Committed to supporting economic growth and improving the lives of people across Afghanistan <br>
+             Our Bank offers services in all provinces of Afghanistan , making banking  accessible to everyone
+            </p>
+        </div>
+    </div>
+
+
+    <div class="container_3">
+
+        <div class="Side_1_1">
+            
+            <h3 id="H3">our Story</h3>
+            <p id="P">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis praesentium cupiditate expedita eum ipsam ad consequuntur nobis quo aperiam deserunt. Praesentium eveniet necessitatibus veritatis facilis obcaecati quos quisquam optio quae?</p>
+        </div>
+
+        <div class="Side_2_2">
+
+            <img src="/image/Side_3_img.jpg" alt="" class="img">
+        </div>
+    </div>
+
+
+    <div class="H3_class"><h3 id="H">AFGHAN Bank By the Numbers</h3></div>
+    <div class="container_4">
+        
+        <div class="Box">
+
+            <div class="img_box">
+                <img src="/image/Network_img.jpg" alt="" class="box_img">
+                <h4 class="pp" style="margin-bottom:20px;">12 Global Offices</h4>
+                <a href="" style="" class="pp"  >Learn more</a>
+            </div>
+        </div>
+
+
+         <div class="Box">
+
+            <div class="img_box">
+                <img src="/image/main_me_img.jpg" alt="" class="box_img">
+                <h4 class="pp" >100 + Employees</h4>
+                <a href="" class="pp">Learn more</a>
+            </div>
+        </div>
+
+         <div class="Box">
+
+            <div class="img_box">
+                <img src="/image/Customer_imgs.jpg" alt="" class="box_img">
+                <h4 class="pp">2000+Customers Global </h4>
+                <a href="" class="pp">Learn more</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container_5">
+
+        <div class="putter">
+           <small class="small">Contact Us</small>
+
+           <h3 class="HHH">AFGHAN Bank is A Quick Solution For Your Business</h3>
+
+           <div class="HHH" id="pad">
+            
+              <button type="submit" class="small_space button">Saving Account</button>
+              <button type="submit" class="small_space button">Business Account</button>
+           </div>
+        </div>
+    </div>
+
+
+
+    <!-- Body part 3 -->
+
+    
+    <div class="container-fluid" style="border:1px solid red;">
+        <div class="row">
+            <div class="col-md-4">one</div>
+            <div class="col-md-4">tow</div>
+            <div class="col-md-4">thre</div>
+        </div>
+    </div>
+    
+
+    <script>
+         function togglem(){
+
+            var meanu=document.getElementById("nav-links");
+
+            if(meanu.style.display=='block'){
+
+                meanu.style.display='none';
+            }
+            else {
+
+                meanu.style.display='block'
+            }
+        }
+    </script>
+</body>
+</html>

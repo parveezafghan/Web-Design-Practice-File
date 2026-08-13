@@ -1,0 +1,11 @@
+{
+
+
+    "name":"parveez",
+    "last Name":"Afghan",
+    "id":18890,
+    "inf":{
+        "Address":["Afghanistan","jalalabad","Hadi"],
+        "Education":{"Univesity":"BCS","English":"DELL","Programing Couress":["C++","java","python",["html","css","javaScript","Boostrap","React","Mysql"]]}
+    }
+}

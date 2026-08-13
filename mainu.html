@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+       body{
+        width:100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+
+        background-image: url(Side.jpg);
+        mask-repeat: no-repeat;
+       }
+
+       
+       
+       aside{
+
+         border:2px solid brown;
+         width:220px;
+         height:100vh;
+         background-color: black;
+         color: white;
+         /* list-style: none; */
+         line-height: 50px;
+         position:fixed;
+
+        
+/*          
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column; */
+        
+       }
+       .clo{
+
+        left:-440px;
+         
+       }
+    </style>
+</head>
+<body >
+     
+    <main >
+        <aside class="clo">
+            <button onclick="no()">Close</button>
+            <ul>
+                <li>parveez afghan</li>
+                <li>jamil khan</li>
+                <li>amanullah mobeen</li>
+                <li>norullah Noori</li>
+                <li>samullah khan</li>
+            </ul>
+        </aside>
+    </main>
+
+    <button onclick="show()">show</button>
+
+
+    <script>
+        function no(){
+
+            document.querySelector('aside').setAttribute('class','clo');
+        }
+
+        function show(){
+
+            document.querySelector('aside').removeAttribute('class');
+        }
+    </script>
+</body>
+
+
+</html>

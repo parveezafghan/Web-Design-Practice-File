@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook-like Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background-color: #f0f2f5;
+    }
+
+    /* Left menu */
+    .left {
+      width: 200px;
+      background-color: #fff;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      position: fixed; /* fixed on left */
+      top: 0;
+      bottom: 0;
+    }
+
+    .left a {
+      display: block;
+      margin-bottom: 15px;
+      color: #1877f2;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Center content */
+    .center {
+      margin-left: 220px; /* leave space for left fixed div */
+      margin-right: 220px; /* leave space for right fixed div */
+      flex: 1;
+      overflow-y: scroll;
+      padding: 20px;
+      height: 100vh;
+    }
+
+    #sc{
+  display: flex;
+  justify-content:space-between;
+  overflow-x: scroll;
+}
+
+
+    .post {
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      cursor:all-scroll;
+    }
+
+    /* Right sidebar */
+    .right {
+      width: 200px;
+      background-color: #fff;
+      padding: 20px;
+      border-left: 1px solid #ccc;
+      position: fixed; /* fixed on right */
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    .right a {
+      display: block;
+      margin-bottom: 15px;
+      color: #1877f2;
+      text-decoration: none;
+    }
+    /* ===== Mobile View ===== */
+@media (max-width: 768px) {
+
+  .left, .right {
+    display: none;   /* hide sidebars */
+  }
+
+  .center {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .menu-btn {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+}
+
+
+}
+
+
+  </style>
+
+  <script>
+    function toggleMenu() {
+  let left = document.querySelector(".left");
+  left.style.display = left.style.display === "block" ? "none" : "block";
+}
+
+  </script>
+</head>
+<body>
+
+  <!-- Left div -->
+  <div class="left">
+    <a href="#">Home</a>
+    <a href="#">Friends</a>
+    <a href="#">Watch</a>
+    <a href="#">Groups</a>
+    <a href="#">Marketplace</a>
+  </div>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+
+  <!-- Center div -->
+  <div class="center">
+    
+    <div class="post" id="sc"> <div style="border: solid rebeccapurple; margin:5px;">This is or Fist java Project </div> <div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div>    <div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div><div>This is or Fist java Project </div> </div>
+    <div class="post">
+      <h3>John Doe</h3>
+      <p>This is a sample post. Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div class="post">
+      <h3>Jane Smith</h3>
+      <p>Another post content goes here. Facebook style scrollable feed.</p>
+    </div>
+    <div class="post">
+      <h3>Mark Johnson</h3>
+      <p>Yet another post. Keep scrolling down to see more content.</p>
+    </div>
+    <div class="post">
+      <h3>Emily Davis</h3>
+      <p>More post content example. This feed is scrollable.</p>
+    </div>
+    <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div> <div class="post">
+      <h3>Michael Brown</h3>
+      <p>Last example post. You can add as many posts as you like.</p>
+    </div>
+  </div>
+
+  
+  <!-- Right div -->
+  <div class="right">
+    <a href="#">Profile</a>
+    <a href="#">Pages</a>
+    <a href="#">Events</a>
+    <a href="#">Saved</a>
+    <a href="#">Settings</a>
+  </div>
+
+</body>
+</html>

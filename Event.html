@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+
+      .G{
+
+        width:500px;
+        height:500px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        background-color: palegreen;
+      }
+
+      .F{
+
+        width:300px;
+        height:300px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        background-color:palegoldenrod;
+      }
+      .C{
+
+        width:150px;
+        height:150px;
+        background-color: palevioletred;
+      }
+      
+    </style>
+</head>
+<body>
+
+
+    
+    
+   
+    <div class="G" id="one">
+      <div class="F" id="two">
+        <div class="C" id="three"></div>
+      </div>
+    </div>
+  
+
+  <script>
+
+   let Target_G=document.getElementById("one");
+   let Target_F=document.getElementById("two");
+   let Target_C=document.getElementById('three');
+
+
+
+   Target_G.addEventListener('click',(e)=>{
+    e.stopPropagation();
+    console.log("G div activate");
+   })
+
+   Target_F.addEventListener("click",(e)=>{
+    e.stopPropagation();
+    console.log("F div Activate");
+   })
+
+   Target_C.addEventListener("click",(e)=>{
+    e.stopPropagation();
+
+    console.log("C div Activate");
+   })
+
+
+   
+  </script>
+</body>
+</html>

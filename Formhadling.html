@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body{
+
+            width:100%;
+            height:100vh;
+            background:#efefef;
+            position:absolute;
+            /* background:#fff;; */
+            /* display: flex; */
+            /* justify-content: center; */
+        }
+
+        section{
+            width:100%;
+            height:100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main{
+
+            width:50%;
+            height:80vh;
+            background:#ffff;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+            margin:50px 0 100px 0;
+            /* align-items: center; */
+           border-radius: 10px;
+           
+        }
+        .main:hover{
+
+            transition: all 1s ease-in-out;
+
+            box-shadow:1px 1px 2px 2px rgb(211, 188, 54);
+        }
+        form{
+
+            margin-top:100px;
+            width:100%;
+        }
+        input{
+
+            width:80%;
+            height:30px;
+            margin-left:50px;
+
+            border: none;
+           border-radius:10px;
+           outline: none;
+           border:1px solid black;
+
+        }
+        input:hover{
+
+            transition: all 1s ease-out;
+            border:1.50px solid green;
+        }
+
+        button{
+
+            width:80%;
+            height:30px;
+            margin-left:50px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            background:rgb(216, 205, 139);
+            color:white;
+        }
+        button:hover{
+
+            background:linear-gradient(rgb(201, 189, 121),rgb(237, 212, 70));
+        }
+        .in{
+
+            border: 1px solid red;
+        }
+        .err{
+
+            margin-left:35px;
+            padding-top:50px;
+            /* margin-top:50px; */
+            color: red;
+        }
+        .su{
+
+            border: 1px solid green;
+        }
+     
+        .mea_div{
+
+            display:block;
+            justify-content: center;
+            width:100%;
+            height:100px;
+            border:1px  saddlebrown solid;
+        }
+
+        nav{
+            width:100%;
+            background:#ffff;
+            height:50px;
+        }
+      
+        ul{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        li{
+            display: flex;
+            justify-content:space-between;
+            padding-top:10px;
+        }
+        a{
+            text-decoration: none;
+            padding-left:10px;
+            color: black;
+            font-family: roboto;
+            font-size:20px;
+            font-weight: bold;
+            margin-right:5px;
+        }
+
+        #M{
+            height: 0;
+            overflow:hidden;
+
+        }
+
+        #M:hover{
+
+            /* display:inline; */
+            height:100px;
+            overflow:auto;
+            border: 1px solid red;
+            transition: all 0.5s ease-in-out;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+<div class="mean_div">
+    <nav>
+
+        <ul>
+            <li class="a"><a href="">Home</a></li>
+            <li class="a"><a href="">About</a></li>
+            <li class="a"><a href="">Services</a></li>
+            <li class="a" style="position:relative;" id="MM"><a href="">Contact</a>
+            
+              <ul style="display: inline; background:#ffff;margin-left:-60px;margin-top:30px;" id="M"> 
+                <li><a href="">Phone</a></li>
+                <li><a href="">WhatsApp</a></li>
+                <li><a href="">Google Meet</a></li>
+              </ul>
+            </li>
+            <li class="a"><a href="Ranking">Ranking</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+    <section>
+         <div class="main">
+        <form id="form">
+            <input type="text" id="user_name" placeholder="Enter user Name ">  <br>
+            <small id="user_name_err" class="err"></small>        <br>
+             <input type="password" id="password" placeholder="Enter Your passwrod"><br>
+             <small id="password_err" class="err" ></small><br>
+             <button type="submit">submit</button>
+        </form>
+     </div>
+    </section>
+
+     <script>
+        let std_Array=[];
+
+        document.getElementById('form').addEventListener('submit',(e)=>{
+
+            e.preventDefault();
+            let user_name=document.getElementById('user_name');
+            let password=document.getElementById('password');
+            let user_name_err=document.getElementById('user_name_err');
+            let password_err=document.getElementById('password_err');
+
+            let check_userName=(user_name)=>{
+
+
+                if(user_name.value===''){
+
+                
+                    // alert('noe')
+                    user_name.classList.add('in');
+                    user_name_err.textContent="X Required User Name";
+                    
+                    return null;
+                }
+                else{
+
+                    user_name.classList.add('su')
+                    user_name_err.textContent="";
+                    return user_name.value;
+                }
+            }
+
+            let check_pass=(pass)=>{
+
+                 
+                alert(pass.value)
+                if(pass.value==''){
+
+                    pass.classList.add('in');
+                    password_err.textContent="X password Required";
+
+                    return null;
+                }
+                else{
+
+                    pass.classList.add('su');
+                    password_err.textContent="";
+
+                    return pass.value;
+                }
+            }
+            
+
+            // alert(user_name);
+            // alert(password.value)
+            check_userName(user_name);
+            check_pass(password);
+
+
+            if(check_userName==null || check_pass==null){
+
+                alert("Fill The Form");
+            }
+            else{
+
+
+                 std_Array.push({userName:check_userName,password:check_pass});
+
+                 console.log(std_Array);
+            }
+        });
+     </script>
+    
+</body>
+</html>

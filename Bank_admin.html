@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/bootstrap.css"> -->
+    <style>
+        
+
+
+
+          *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:#fff;
+        }
+
+        .navbar{
+
+            display: flex;
+            /* position: sticky; */
+            top:0;
+            /* z-index:1000; */
+            justify-content: space-between;
+            align-items: center;
+            /* background-color:#003366; */
+            background:#fff;
+            padding: 15px 30px;
+            color: black;
+            box-shadow:2px 2px 4px rgb(239, 233, 223);
+
+        }
+
+        .logo{
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links ul{
+            list-style: none;
+            display: flex;
+
+        }
+
+        .nav-links ul li{
+            padding-left:25px;
+
+        }
+
+        .nav-links ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+
+        }
+
+        .menu-toggle{
+
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+
+        @media (max-width:768px){
+
+            .nav-links{
+
+                position:absolute;
+                top: 60px;
+                right:0;
+                /* background-color:#003366; */
+                background:#fff;
+                box-shadow:2px 2px 4px rgb(239, 233, 223);
+                width:100%;
+                display: none;
+                text-align: center;
+            }
+            .nav-links ul{
+
+                margin: 15px 0;
+
+            }
+
+            .menu-toggle{
+                display:block;
+            }
+        }
+        .container_11{
+
+            display: flex;
+            justify-content:space-between;
+            /* background-color:#fefefe; */
+             /* background-color:#efefef; */
+             background: #fff;
+              box-shadow:2px 2px 4px rgb(239, 233, 223);
+              height:50px;
+        }
+        ul{
+
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+        li{
+
+            /* padding-right:100px; */
+            padding-left:100px;
+            padding-top:15px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .A{
+
+            font-size:large;
+           
+
+        }
+        
+        .H{
+
+            padding-top:15px;
+            padding-left:70px;
+        }
+
+        /* Body part */
+        .container_1{
+
+            width:100%;
+            height:100vh;
+            display: flex;
+        }
+        .side_1{
+
+            /* width:60%; */
+            height:100vh;
+            /* padding:100px; */
+
+            width:50%;
+            border-radius:10px;
+        }
+        h2{
+            font-size: xx-large;
+            color:rgb(131, 131, 230);
+            /* padding-inline:30px;  */
+            padding-bottom:20px
+
+        }
+        h1{
+            font-size: xx-large;
+            color:rgb(135, 119, 119);
+             padding-bottom:20px;
+
+            
+        }
+        .Sing{
+
+            border:1px solid rebeccapurple;
+            width:150px;
+            height:30px;
+            margin-top:20px;
+            background:palegreen;
+            border-radius:15px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       p{
+        font-size: large;
+       }
+
+       .side_2{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right:100px;
+        
+       }
+       img{
+        /* box-shadow:1px 0 4px black; */
+
+         margin:0;
+       }
+
+      
+       
+
+       .form_group{
+
+        padding-top:30px;
+       }
+       label{
+
+        padding-bottom:20px;
+       }
+       
+       .input{
+
+         border: none;
+         width:300px;
+         border-bottom:2px solid rebeccapurple;
+         border-radius:2px;
+         height:20px;
+       }
+
+       .input:hover{
+
+        width:0;
+         /* transition:all 0.3 ease-in-out; */
+         width:330px;
+         border:0;
+         border-bottom:4px solid rebeccapurple;
+         border-radius:3px;
+          transition:all 1.5s ease-in-out;
+          height:40px;
+          padding-top:0px;
+          /* margin-top:20px; */
+         /* border:3px; */
+          /* height:30px; */
+       }
+
+       button{
+
+        background: palegreen;
+        height:50px;
+        border: none;
+        border-radius:20px;
+       }
+       button:hover{
+
+        transition: all 1.5s ease-in-out;
+        background-color:rgb(187, 231, 187);
+        height:60px;
+        /* width:320px; */
+
+       }
+
+       .sing_a{
+
+        background: palegreen;
+        height:30px;
+        border: none;
+        border-radius:20px;
+
+        padding-top:20px;
+        padding-left:120px;
+
+       }
+       
+       /* input:hover{
+
+        border: none;
+        border-bottom:2px solid rebeccapurple;
+        list-style: none;
+       } */
+
+
+       .input-check
+       {
+
+        width:50px;
+        height:40px;
+        margin-left:10px;
+        border: none;
+
+        border-bottom:3px solid rebeccapurple;
+       }
+
+       .input-check:hover{
+
+        transition:all 1.5s ease-in-out;
+        width:60px;
+        height:50px;
+        
+       }
+
+       .select_{
+
+        height:30px;
+        width:100px;
+        border:1px solid rebeccapurple;
+        border-radius:10px;
+        margin-left:50px;
+        
+       }
+    
+       select:hover{
+
+         border:3px solid rebeccapurple;
+         width: 150px;
+         transition: all 1.5s ease-in-out;
+         margin-left:20px;
+         height:35px;
+         /* height:50px; */
+       }
+       .check_{
+        padding-left:10px;height:20px;
+
+        /* height:50px; */
+       }
+
+       .check_:hover{
+
+        transition:all 1.5s ease-in-out;
+        padding-left:15px ;
+        width:300px;
+        height:40px;
+        border-radius:20px;
+        /* background-color: black; */
+        /* border:10px solid rebeccapurple; */
+       }
+       
+
+       /* Meadai Query */
+/* 
+
+ @media (max-width:500px){
+
+     body{
+        
+        height:100vh;
+      
+        margin-left:10px;
+        margin-right:0px;
+        padding-left:0;
+
+
+     }
+     .side_1{
+        display: none;
+     }
+     .side_2{
+
+        margin-left:100px;
+     }
+     ul{
+        display: block;
+     }
+     .container_11{
+        border: 2px solid rgb(113, 113, 224);
+
+        height:250px;
+     }
+     .container_1{
+        border: 3px solid red;
+     }
+
+     *{
+        margin: 0;
+      
+
+     }
+ } */
+
+    </style>
+     
+     <link rel="stylesheet" href="/css/all.css">
+</head>
+<body>
+
+   
+
+     <div class="navbar">
+
+        <div class="log">
+            AFGHAN Bank
+        </div>
+
+
+        <div class="menu-toggle" onclick="togglem()">
+           <i class="fa-solid fa-bars"></i>
+        </div>
+
+
+        <div class="nav-links" id="nav-links">
+
+            <ul>
+                <li><a href="/Bank_home.html">Home</a></li>
+                 <li><a href="/Bank_about.html">About</a></li>
+                  <li><a href="/Bank_services.html">Services</a></li>
+                   <li><a href="/Bank_contact.html">Contact us</a></li>
+                    <li><a href="/Bank_login.html">Login</a></li>
+                     <li><a href="/Bank_admin.html">Admin</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    
+    <!-- <div class="container_11">
+
+        <div class="H"><h4 style="color:rgb(113, 113, 224);font-size: x-large;font-family: Arial, Helvetica, sans-serif;font-weight: bold;">AFGHAN Bank</h4></div>
+
+        <div>
+            <ul>
+                <li><a href="/Bank_home.html" class="A">Home</a></li>
+                <li><a href="/Bank_about.html" class="A">About</a></li>
+                <li><a href="/Bank_services.html" class="A">Services</a></li>
+                <li><a href="/Bank_contact.html" class="A"  >contact us</a></li>
+                <li style="font-size: x-large;" id="AA"   ><a href="/Bank_login.html" id="A" class="A"  style="font-size:x-large;">Login</a></li>
+                <li style="padding-right:30px;"><a href="" class="A" style="font-size:x-large;">Admin</a></li>
+            </ul>
+        </div>
+    </div> -->
+
+    
+    <div class="container_1">
+        <div class="side_1" >
+
+            
+             <!-- <h2 ">Online</h2>
+            <h1>Banking</h1>
+            <p>Your Are Provide Better Transication and payment</p> -->
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aliquam minus nam! Esse facilis officiis quasi, eos </p>
+            <div class="Sing"><a href="" class="a_tag">SING IN</a></div>  --> 
+
+            <!-- <h1 style="font-weight:800;">Welcome to Kabul Bank Admin page</h1> -->
+            <!-- <h1 style="font-weight: 900;">Login in To access Admin Panel</h1> -->
+             <img src="/image/side_1_img.jpg" alt="" style="padding-top:10px;">
+        </div>
+        <div class="side_2" style="width:60%;;height:100vh;">
+           
+            <div style="height:100vh;box-shadow: 2px 2px 10px 2px #006266;border-radius:10px;width:500px;display: flex; justify-content: center;background-color: #fff;margin-top:20px;">
+                <form action="">
+                    <h3 style="padding-top: 10px;padding-left:50px;">Admin Login</h3>
+                    <div class="form_group" style="display: flex;flex-direction: column;">
+                    <label for="">User Name</label>
+                    <input class="input" type="text">
+                    </div>
+
+
+                    <div class="form_group" style="display: flex;flex-direction: column;">
+                    <label for="">Account password</label>
+                    <input class="input" type="text">
+                    </div>
+                    
+                     <div class="pin_code form_group" style="display: flex;" >
+
+                        <input class="input-check" type="text" placeholder="P1"> <input class="input-check" type="text" placeholder="P2"> <input class="input-check" type="text" placeholder="P3"> <input class="input-check" type="text" placeholder="P4"> <input class="input-check" type="text" placeholder="P5">
+
+                     </div>
+
+                     <div class="form_group " style="display: flex;">
+                          <select class="select_"  name="" id="">
+                            <option value="" disabled selected>state</option>
+                            <option value="">one</option>
+                            <option value="">two</option>
+                            <option value="">Three</option>
+                          </select>
+
+
+                          <select class="select_" name="" id="">
+                            <option value="" disabled selected>Branch</option>
+                            <option value="">Kabult</option>
+                            <option value="">Nangrahar</option>
+                            <option value="">Balkh</option>
+                            <option value="">Pakty</option>
+                          </select>
+                     </div>
+                     
+                     <div class="form_group" style="display: flex;flex-direction: column;">
+                       <!-- <label for="">Are You Sure</label> -->
+                      <input class="check_" type="checkbox" >
+                    </div>
+                    
+                    <div class="form_group" style="display: flex;flex-direction: column;">
+                     <button type="submit">Sing in</button>
+                    </div>
+
+                     <!-- <div class="form_group" style="display: flex;flex-direction: column;">
+                     <button type="submit">Sing in</button>
+                      <a href="" class="sing_a">Admin Login</a>
+                    </div> -->
+
+
+
+
+                  
+                                       
+                </form>
+
+                  
+                
+            </div>
+
+            <!-- <div class="form_group" style="display: flex;flex-direction: column;">
+                     <button type="submit">Amdin Login</button></div> -->
+        </div> 
+     </div>  
+
+
+
+
+     <script>
+
+        function togglem(){
+
+            var meanu=document.getElementById("nav-links");
+
+            if(meanu.style.display=='block'){
+
+                meanu.style.display='none';
+            }
+            else {
+
+                meanu.style.display='block'
+            }
+        }
+    </script>
+    
+</body>
+</html>

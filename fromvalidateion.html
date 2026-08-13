@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <form id="form">
+        <div><input type="password" placeholder="password" id="pass"> <br>
+            <small id="Epass"></small>
+        </div>
+
+        <div>
+            <input type="text" placeholder="Name" id="Name">
+            <small id="EName"></small>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+
+<script>
+
+
+    let data=[];
+    document.getElementById('pass').addEventListener('keyup',(e)=>{
+
+
+        e.preventDefault();
+
+
+        let pass=document.getElementById('pass').value;
+
+
+        let E=document.getElementById('Epass');
+        if(pass.length<5){
+            E.textContent="Required 5 Character";
+        }
+        else{
+
+            E.textContent="Success";
+
+            data.push(pass);
+        }
+    })
+
+
+    document.getElementById('Name').addEventListener('keyup',(e)=>{
+
+
+        e.preventDefault();
+
+
+        let name=document.getElementById('Name');
+        let Ename=document.getElementById("EName");
+
+        if(name.length<5){
+
+            Ename.textContent="Required 5 Charcter";
+
+
+        }
+        else{
+
+            Ename.textContent="Success";
+            data.push(name);
+        }
+    })
+</script>
+</html>

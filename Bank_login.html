@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/all.css">
+    <!-- <link rel="stylesheet" href="/bootstrap.css"> -->
+    <style>
+      
+       
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:whitesmoke;
+        }
+
+        .navbar{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color:#003366; */
+            background:#fff;
+            padding: 15px 30px;
+            color: black;
+            box-shadow:2px 2px 4px rgb(239, 233, 223);
+
+        }
+
+        .logo{
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links ul{
+            list-style: none;
+            display: flex;
+
+        }
+
+        .nav-links ul li{
+            padding-left:25px;
+
+        }
+
+        .nav-links ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+
+        }
+
+        .menu-toggle{
+
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+
+        @media (max-width:768px){
+
+            .nav-links{
+
+                position:absolute;
+                top: 60px;
+                right:0;
+                /* background-color:#003366; */
+                background:#fff;
+                box-shadow:2px 2px 4px rgb(239, 233, 223);
+                width:100%;
+                display: none;
+                text-align: center;
+            }
+            .nav-links ul{
+
+                margin: 15px 0;
+
+            }
+
+            .menu-toggle{
+                display:block;
+            }
+        }
+
+
+        .container_11{
+
+            display: flex;
+            justify-content:space-between;
+            /* background-color:#fefefe; */
+             /* background-color:#efefef; */
+             background: #fff;
+              box-shadow:2px 2px 4px rgb(239, 233, 223);
+              height:50px;
+        }
+        ul{
+
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+        li{
+
+            /* padding-right:100px; */
+            padding-left:100px;
+            padding-top:15px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .A{
+
+            font-size:larger;
+           
+
+        }
+        
+        .H{
+
+            padding-top:15px;
+            padding-left:70px;
+        }
+
+        /* Body part */
+        .container_1{
+
+            width:100%;
+            height:100vh;
+            display: flex;
+            background:#fff;
+            margin-top:5px;
+        }
+        .side_1{
+
+            width:60%;
+            height:100vh;
+            /* padding:100px; */
+            padding-top:5px;
+        }
+        h2{
+            font-size: xx-large;
+            color:rgb(131, 131, 230);
+            /* padding-inline:30px;  */
+            padding-bottom:20px
+
+        }
+        h1{
+            font-size: xx-large;
+            color:rgb(135, 119, 119);
+             padding-bottom:20px;
+
+            
+        }
+        .Sing{
+
+            border:1px solid rebeccapurple;
+            width:150px;
+            height:30px;
+            margin-top:20px;
+            background:palegreen;
+            border-radius:15px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       p{
+        font-size: large;
+       }
+
+       .side_2{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right:100px;
+       }
+       img{
+        /* box-shadow:1px 0 4px black; */
+        width:100%;
+        height:100vh;
+        
+       }
+
+      
+       
+
+       .form_group{
+
+        padding-top:30px;
+       }
+       label{
+
+        padding-bottom:20px;
+       }
+       input{
+
+         border: none;
+         width:300px;
+         border-bottom:2px solid rebeccapurple;
+         border-radius:2px;
+         height:20px;
+       }
+
+
+       button{
+
+        background: palegreen;
+        height:50px;
+        border: none;
+        border-radius:20px;
+       }
+       button:hover{
+
+        transition: all 1.5s ease-in-out;
+        height:60px;
+        background:rgb(201, 241, 201);
+        border-radius:35px;
+        
+       }
+       .sing_a{
+
+        background: palegreen;
+        height:30px;
+        border: none;
+        border-radius:20px;
+
+        padding-top:20px;
+        padding-left:120px;
+
+       }
+       .sing_a:hover{
+
+        transition: all 1.5s ease-in-out;
+        height:40px;
+        background: rgb(197, 232, 197);
+        border-radius:35px;
+       }
+       
+       input:hover{
+
+        transition: all 1.5s ease-in-out;
+
+        border: none;
+        border-bottom:4px solid rebeccapurple;
+        width:350px;
+        height:30px;
+        padding-top:20px;
+        /* list-style: none; */
+       }
+
+       @media (max-width:800px){
+
+        li{
+            margin-left:10px;
+
+        }
+        ul{
+            display: block;
+            border:1px solid red;
+        }
+       }
+       
+    </style>
+    
+</head>
+<body>
+
+
+
+
+     <div class="navbar">
+
+        <div class="log">
+            AFGHAN Bank
+        </div>
+
+
+        <div class="menu-toggle" onclick="togglem()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+
+        <div class="nav-links" id="nav-links">
+
+            <ul>
+                <li><a href="/Bank_home.html">Home</a></li>
+                 <li><a href="/Bank_about.html">About</a></li>
+                  <li><a href="/Bank_services.html">Services</a></li>
+                   <li><a href="/Bank_contact.html">Contact us</a></li>
+                    <li><a href="/Bank_login.html">Login</a></li>
+                     <li><a href="/Bank_admin.html">Admin</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+   
+    
+   
+
+    
+    <div class="container_1">
+        <div class="side_1" >
+
+            
+            
+
+            <!-- <h1 style="font-weight:800;">Welcome to Kabul Bank Login page</h1>
+            <h1 style="font-weight: 900;">Login in To access your Account </h1> -->
+
+            <img src="/image/Side_2_img.jpg" alt="" width="100%">
+        </div>
+        <div class="side_2" style="width:60%;;height:100vh;">
+           
+            <div style="height:80vh;box-shadow: 2px 2px 10px 2px #006266;border-radius:10px;width:500px;display: flex; justify-content: center;background-color:#fff;">
+                <form action="">
+                      <h3 style="padding-top:10px;padding-left:50px;">User Login</h3>    
+                    <div class="form_group" style="display: flex;flex-direction: column;">
+                    <label for="">Account Name</label>
+                    <input type="text">
+                    </div>
+
+
+                    <div class="form_group" style="display: flex;flex-direction: column;">
+                    <label for="">Account password</label>
+                    <input type="text">
+                    </div>
+                     
+                     <div class="form_group" style="display: flex;flex-direction: column;">
+                       <!-- <label for="">Are You Sure</label> -->
+                      <input type="checkbox" style="padding-left:10px;height:20px;">
+                    </div>
+                    
+                    <div class="form_group" style="display: flex;flex-direction: column;">
+                     <button type="submit">Sing in</button>
+                    </div>
+
+                     <div class="form_group" style="display: flex;flex-direction: column;">
+                     <!-- <button type="submit">Sing in</button> -->
+                      <a href="/Bank_admin.html" class="sing_a">Admin Login</a>
+                    </div>
+
+
+
+
+                  
+                                       
+                </form>
+
+                  
+                
+            </div>
+
+            <!-- <div class="form_group" style="display: flex;flex-direction: column;">
+                     <button type="submit">Amdin Login</button></div> -->
+        </div> 
+     </div>  
+
+
+
+     <script>
+
+        function togglem(){
+
+            var meanu=document.getElementById("nav-links");
+
+            if(meanu.style.display=='block'){
+
+                meanu.style.display='none';
+            }
+            else {
+
+                meanu.style.display='block'
+            }
+        }
+    </script>
+    
+</body>
+</html>

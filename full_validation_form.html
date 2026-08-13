@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+        }
+        body{
+
+            width:100%;
+            height:100vh;
+           display: flex;
+           justify-content: center;
+
+        }
+        
+
+
+        input ,button{
+
+            width:70%;
+            height:20px;
+
+
+        }
+        .text{
+            width:70%;
+        }
+
+        button{
+            margin-top:10px;
+            /* widthpx; */
+        }
+        small{
+            display: none;
+        }
+        .error input  {
+
+            border:2px solid red;
+            width:70%;
+            height:20px;
+        }
+        
+        .success input{
+           
+            border:2px solid rgb(193, 220, 153);
+            width:70%;
+            height:20%;
+        }
+
+        .sm small{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="full">
+
+         <h1>Registration Form</h1>
+        <form id="form">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Name">
+                <small></small>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="last_name" placeholder="Last Name">
+                <small></small>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="age" placeholder="age">
+                <small></small>
+            </div>
+
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password">
+                <small></small>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email">
+                 <small></small>
+            </div>
+            <div class="form-group">
+            <!-- <input type="text-area" column="10" placeholder="put Comment" class="comment"> -->
+             <textarea name=""  id="text" placeholder="put Some Comment" rows="10" ></textarea>
+             <small></small>
+            </div>
+
+         <div class="form-group">  <button type="submit">submit</button>  </div> 
+        </form>
+
+    </div>
+
+    <script>
+        let form=document.getElementById("form");
+        let name=document.getElementById("name");
+        let last_name=document.getElementById("last_name");
+        let age=document.getElementById("age");
+        let password=document.getElementById("password");
+        let  email=document.getElementById("email");
+        let text=document.getElementById('text');
+       
+        console.log(text);
+
+        form.addEventListener('submit',(e)=>{
+
+            e.preventDefault();
+
+
+           validateion();
+        })
+
+
+      function  validateion(){
+               
+
+             function error(element,message){
+
+                let form_group=element.parentElement;
+                // console.log(form_group);
+
+                form_group.className="sm error";
+
+                form_group.querySelector('small').innerHTML=message;
+
+
+                
+
+             }
+
+             function success(element){
+
+                let form_group=element.parentElement;
+
+                form_group.className="success";
+
+
+             }
+            
+
+             if(name.value==""){
+                error(name,"Name Required");
+             }else if(name.value.length<4){
+                error(name,"At Least 4 Character");
+             }else if(name.value.match(/[0-9g]/)){
+
+                error(name,"Number Not Required");
+             }
+             else{
+                success(name);
+             }
+
+
+             if(last_name.value==""){
+
+                error(last_name,'Last Name Required');
+             }else if(last_name.value.length<4){
+
+                error(last_name,"At least 4 Character")
+             }else if(!last_name.value.match(/[0-9g]/)){
+
+                error(last_name,"Number Not Required");
+             }else{
+                success(last_name);
+             }
+
+
+             if(age.value==""){
+
+                error(age,"Age Required");
+             }else if(!age.value.match(/[0-9g]/)){
+
+                error(age,"Number Required")
+             }else if(age.value.length<18 && age.value.length>=18){
+
+                error(age,'Your Age Must by 18 or Grader');
+             }
+             else{
+                success(age);
+             }
+
+
+             if(password.value==""){
+
+                error(password,"Password Required");
+             }else if(password.value.length<5){
+
+                error(password,"At least 5 Character password");
+             }
+             else {
+
+                success(password);
+             }
+
+
+             if(email.value==""){
+
+                error(email,"Email Required ");
+
+             }else if(email.value.length<10){
+
+                error(email,"Email At Least 10 Character ");
+             }else if(email.value.include("@")&& email.value.include('gamil')){
+
+                error(email,"@ Reqired and Gamil");
+             }
+             else {
+
+                success(email);
+             }
+
+             if(text.value==""){
+
+                error(text,"comment Requred");
+             }
+             else{
+                success(text);
+             }
+
+
+        }
+    </script>
+    
+</body>
+</html>

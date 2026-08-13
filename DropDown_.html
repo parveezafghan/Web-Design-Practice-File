@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .S{
+
+        height:0;
+        width:0;
+        display: none;
+     }
+
+     .Show{
+
+        height:100px;
+        width:100px;
+        display:block;
+        border: 1px solid rebeccapurple;
+     }
+
+
+     .SA{
+        /* border:2px solid rebeccapurple; */
+        margin-top:100px;
+        box-shadow: 1px 1px 1px 1px rebeccapurple;
+        width:200px;
+        height:200px;
+        position: relative;
+     }
+
+     .item{
+        width: 0;
+        height:0;
+        display: none;
+     }
+
+     .item_add{
+
+        height:500px;
+        width:500px;
+        display: block;
+        position: absolute;
+     }
+    </style>
+</head>
+<body>
+
+    <div style="position: relative;">
+        <a href="" ondblclick="open()" id="open">Click to open</a>
+
+        <div style="position: absolute;" class="S" id="o">This is Dropdown Meanu</div>
+
+        <div>Open Two </div>
+    </div>
+
+
+    <div class="SA">
+        <small>Sale</small>
+        <small>100 Items</small>
+        <a href="" onclick="" id="AA">Add Item</a>
+
+
+        <div class="S" id="item">
+            <form action="">
+                <input type="number" placeholder="Add item">
+                <button>Add</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        let item=document.getElementById('item');
+        // let CC=document.getElementById('C');
+        // let CC=document.querySelector('.C');
+        let AA=document.getElementById('AA');
+        console.log(AA);
+        console.log(item);
+        AA.addEventListener('click',(e)=>{
+
+            e.preventDefault();
+
+            item.classList.toggle('item_add');
+        })
+
+        let id=document.getElementById('o');
+
+        let open=document.getElementById('open');
+
+
+       
+        
+
+ 
+         open.addEventListener('click',(e)=>{
+
+        e.preventDefault();
+
+
+        id.classList.toggle("Show")
+    })
+    </script>
+    
+</body>
+</html>

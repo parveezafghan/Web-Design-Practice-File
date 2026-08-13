@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+       *{
+        padding: 0;
+        margin: 0;
+        transition:all 0.3s ease;
+         
+       }
+
+       .main_menu{
+        background-color: aqua;
+        display: inline-block;
+        width:100%;
+        position:relative;
+       }
+
+       .main_menu ul li{
+        display:inline-block;
+        padding-left:60px;
+        padding-top:10px;
+        padding-bottom: 10px;
+
+       }
+
+       ul li a{
+        text-decoration: none;
+       }
+
+       .main_sb{
+
+        /* border: 2px solid rebeccapurple; */
+        position:absolute;
+        background-color:palegreen;
+
+        height:0;
+        overflow: hidden;
+       }
+       .main_sb ul li{
+
+        display:block;
+        padding-left:0;
+        
+       }
+       
+       .main_menu ul li:hover .main_sb{
+
+        height:200px;
+        background-color: antiquewhite;
+        
+        /* border: 2px solid red; */
+       }
+
+   
+
+        
+    </style>
+</head>
+<body>
+
+    <div>
+        <aside class="main_menu" >
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Shop
+                    <aside class="main_sb">
+                        <ul>
+                            <li class="one"><a href="#">one</a></li>
+                            <li class="one"><a href="#">two</a></li>
+                            <li class="one"><a href="#">three</a></li>
+                            <li class="one"><a href="#">four</a></li>
+                            <li class="one"><a href="#">five</a></li>
+                        </ul>
+                    </aside>
+                </a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>

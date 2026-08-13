@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+
+            display: flex;
+        }
+        img{
+
+          width:95%;
+        }
+        .side_1{
+
+            /* border:2px solid red; */
+            width:50%;
+            height:100vh;
+            background-color: rgb(151, 151, 239);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        
+        }
+
+        .side_2{
+
+            /* border:2px solid red; */
+            width:50%;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+    
+        }
+        h3{
+
+            padding-bottom:30px;
+        }
+
+        label{
+
+         padding-bottom:10px;
+        }
+        input:hover{
+
+            border:3px solid black;
+            border-radius:7px;
+            height:25px;
+        }
+        button{
+
+            background-color: rgb(135, 135, 236);
+            outline:none;
+            height:25px;
+            border: none;
+            border-radius:10px;
+        }
+        form{
+            display:flex;
+            flex-direction: column;
+        }
+        h2{
+
+            padding-top:10px;
+        }
+        h4{
+
+            padding-top:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="side_1">
+            <img src="Side.jpg" alt="Error">
+            <h2>This is Hotal management System</h2>
+            <h4>Professional System For management</h4>
+        </div>
+        <div class="side_2">
+
+            <h3>Welcome To Admain Panel</h3>
+
+            <form action="">
+                <label for="">Enter User Name</label>
+                <input type="text">
+                <br>
+                <label for="">Enter Password</label>
+                <input type="text">
+                <br>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .one{
+
+            width:600px;
+            height:600px;
+            display: flex;
+            background-color:rgb(223, 108, 108);
+            align-content: center;
+            align-items:center;
+            margin-left:120px;
+        }
+        .two{
+            width:400px;
+            height:400px;
+            display: flex;
+            background-color: yellow;
+            align-content: center;
+            align-items: center;
+            margin-left: 100px;
+        }
+        .three{
+
+            width:250px;
+            height:250px;
+            background-color: palegreen;
+        }
+    </style>
+</head>
+<body>
+  
+    
+    <div class="one" id="one">
+        <div class="two" id="two">
+            <div class="three" id="three"></div>
+        </div>
+    </div>
+
+    <SCRipt>
+
+
+      const one=document.getElementById("one");
+      const two=document.getElementById("two");
+      const three=document.getElementById("three");
+
+
+      one.addEventListener("click",function(e){
+
+        e.stopPropagation();
+        console.log("one");
+      })
+      two.addEventListener("click",function(e){
+
+        e.stopPropagation();
+        console.log("two");
+      })
+      three.addEventListener("click",function(e){
+
+        e.stopPropagation();
+        console.log("three");
+      })
+
+    </SCRipt>
+    
+</body>
+</html>

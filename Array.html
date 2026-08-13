@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+
+     let Numbers=[1,2,3,4,5,6,7,8,9,10];
+
+     let Copy_Array_Elements=[];
+
+
+     console.log(Numbers.length)
+      for(let I=Numbers.length;I>=0;I--){
+
+        console.log(Numbers[I]);
+        
+        console.log("Iteration:"+I);
+       
+          
+      }
+
+
+      for(let I_=Numbers.length;I_>=0;I_--){
+
+         Copy_Array_Elements.push(Numbers[I_]);
+
+      }
+      Copy_Array_Elements.shift();
+      console.log("Copy Array:",Copy_Array_Elements);
+    </script>
+</body>
+</html>

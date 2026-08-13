@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+    body{
+
+      
+        width:100%;
+        height:100%;
+         background: #efefef;
+    }
+    .main_container_css{
+
+        width:70%;
+        height:100%;
+        margin-left: auto;
+        margin-right: auto;  
+        margin-top:50px;
+        border-radius:10px;
+         background:#fff; 
+    }
+    .Title_div{
+        text-align: center;
+        padding-top:15px;
+    }
+
+    .title{
+
+        font-family: roboto;
+        font-weight: bold;
+    }
+
+    .form_div{
+
+        display: flex;
+        justify-content: center;
+        margin-top:50px;
+    }
+
+    form{
+
+        width:80%;
+    }
+    input{
+
+        height:30px;
+        width:40%;
+        outline: none;
+        /* border-radius:5px; */
+        /* border: none; */
+        /* border:2px solid blacks; */
+    }
+    select{
+        width:20%;
+        height:38px;
+        border-radius:5px;
+        outline: none;
+
+    }
+    input:hover{
+
+        transition:all 1s ease-in-out;
+        /* border:3px solid rgb(110, 199, 234); */
+    }
+
+    .btn{
+
+        width:150px;
+        height:40px;
+        background:rgb(132, 228, 132);
+        border: none;
+        border-radius:10px;
+    }
+
+    .btn:hover{
+
+        transition:all 1s ease-in-out;
+        width:160px;
+        height:45px;
+        background:rgb(73, 154, 73);
+        
+    }
+
+    .table_div{
+
+        /* margin-left: auto;
+        margin-right: auto; */
+
+        display: flex;
+        justify-content: center;
+        margin-top:40px;
+    }
+
+    table{
+
+        width:90%;
+        border:10px;
+        border-top:1px solid green;
+        border-bottom:1px solid black;
+        border-right:1px solid black;
+        border-left:1px solid black;
+        /* border:1px solid black; */
+    }
+    tr{
+
+        /* border-bottom:2px solid black; */
+        border:1px solid black;
+    }
+    th,td{
+
+        border-spacing:100px;
+        margin-top:0;
+        height:50px;
+        
+        /* width:100%; */
+
+        border-bottom:1px solid black;
+    }
+    th{
+
+        font-family: roboto;
+        background: rgb(144, 193, 144);
+        /* padding-left:10%; */
+        /* border: 1px; */
+    }
+    .second{
+        padding-left:25%;
+        font-family: roboto;
+        /* border: 1px solid red; */
+    }
+
+    .first{
+
+        padding-left:5%;
+        font-family: roboto;
+        
+    }
+    .third{
+
+        padding-left:5%;
+        font-family: roboto;
+    }
+    .take_Attendence{
+
+        margin-left:35px;
+        margin-top:10px;
+        margin-bottom:30px;
+    }
+
+    .Attendence_button{
+
+        width:200px;
+        height:50px;
+        background:rgb(171, 230, 171);
+        outline: none;
+        border: none;
+        border-radius:10px;
+        font-family:roboto;
+
+    }
+    </style>
+</head>
+<body>
+
+
+    <div class="main_container_css">
+
+        <div class="Title_div"><h3 class="title">Employee Attendence Management system</h3></div>
+
+
+        <div class="form_div">
+            <form >
+                <input type="text" placeholder="Enter Employee user Name" id="user_Name">
+                <select  id="" >
+                    <option value="Present">Present</option>
+                    <option value="absent">Absent</option>
+                    <option value="holy day">Holy Day</option>
+                </select>
+                <button class="btn" type="submit">Take Attendence</button>
+            </form>
+        </div>
+
+
+        <div class="table_div">
+            <table >
+
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>Employee Name</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                     <tr>
+                        <td class="first">1</td>
+                        <td class="second">parveez Afghan</td>
+                        <td class="third" > <input value="1" class="attend" type="checkbox"> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="first">1</td>
+                        <td class="second">parveez Afghan</td>
+                        <td class="third " > <input value="2" class="attend" type="checkbox"> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="first">1</td>
+                        <td class="second">parveez Afghan</td>
+                        <td class="third" > <input value="3" class="attend" type="checkbox"> </td>
+                    </tr>
+
+                  
+                   
+                </tbody>
+            </table>            
+        </div>
+
+        <div class="take_Attendence">
+                <button class="Attendence_button" onclick="submitAttendence()">Take Attendence</button>
+            </div>
+    </div>
+
+
+    <script>
+
+
+ let check_box=document.querySelectorAll('attend');
+
+//  console.log(check_box.value);
+
+
+        function submitAttendence(){
+
+
+            let check_box=document.querySelectorAll('.attend');
+
+            // console.log(check_box.value);
+            let data=[];
+
+            console.log(check_box)
+
+            check_box.forEach(element=>{
+
+                console.log("one")
+
+                // console.log(element.value)
+                console.log(element.checked);
+                data.push({
+
+                    employee:element.value,
+                    status:element.checked?"present":'Absent',
+                })
+            })
+
+            console.log(data);
+        }
+
+
+    </script>
+    
+</body>
+</html>

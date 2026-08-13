@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/all.css">
+    <style>
+       
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:whitesmoke;
+        }
+
+        .navbar{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color:#003366; */
+            background:#fff;
+            padding: 15px 30px;
+            color: black;
+            /* margin-top:5px; */
+            margin-bottom:5px;
+            box-shadow:2px 2px 4px rgb(239, 233, 223);
+
+        }
+
+        .logo{
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links ul{
+            list-style: none;
+            display: flex;
+
+        }
+
+        .nav-links ul li{
+            padding-left:25px;
+
+        }
+
+        .nav-links ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+
+        }
+
+        .menu-toggle{
+
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        .A_Tag{
+
+            /* font-size:100px; */
+            color: aqua;
+
+
+            font-size:200px;
+        }
+
+        #A_{
+
+            font-size:18px;
+        }
+
+
+        @media (max-width:768px){
+
+            .nav-links{
+
+                position:absolute;
+                top: 60px;
+                right:0;
+                /* background-color:#003366; */
+                background:#fff;
+                box-shadow:2px 2px 4px rgb(239, 233, 223);
+                width:100%;
+                display: none;
+                text-align: center;
+            }
+            .nav-links ul{
+
+                margin: 15px 0;
+
+            }
+
+            .menu-toggle{
+                display:block;
+            }
+        }
+        .container{
+
+            display: flex;
+            justify-content:space-between;
+            /* background-color:#fefefe; */
+             /* background-color:#efefef; */
+             background: #fff;
+              box-shadow:2px 2px 4px rgb(239, 233, 223);
+              height:50px;
+
+              /* position:fixed; */
+              /* margin-right:0; */
+        }
+        ul{
+
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+        li{
+
+            /* padding-right:100px; */
+            padding-left:100px;
+            padding-top:15px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .A{
+
+            font-size:larger;
+           
+
+        }
+        
+        .H{
+
+            padding-top:15px;
+            padding-left:70px;
+        }
+
+        /* Body part */
+        .container_1{
+
+            /* display: flex; */
+        }
+        .side_1{
+
+            /* padding:100px; */
+            /* display: flex; */
+            /* justify-content: center; */
+            /* flex-direction: column; */
+            /* margin-top:20px; */
+            padding-top:50px;
+            padding-left:35%;
+            width:100%;
+            /* border: 1px solid rebeccapurple; */
+            height:60vh;
+            background: #fff;
+        }
+        h2{
+            font-size: xx-large;
+            color:rgb(131, 131, 230);
+            /* padding-inline:30px;  */
+            padding-bottom:20px
+
+        }
+        h1{
+            font-size: xx-large;
+            color:rgb(135, 119, 119);
+             padding-bottom:20px;
+
+            
+        }
+        .Sing{
+
+            border:1px solid rebeccapurple;
+            width:150px;
+            height:30px;
+            margin-top:20px;
+            background:palegreen;
+            border-radius:15px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       p{
+        font-size: large;
+       }
+
+       .side_2{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right:100px;
+        /* border:1px solid rebeccapurple; */
+        height:50vh;
+        width:100%;
+        position: relative;
+        /* background:rgb(234, 228, 219); */
+        background:	#d5f1f1;
+        /* border: 1px solid rebeccapurple; */
+       }
+
+       .inner_side_2{
+
+        position: absolute;
+        /* border:1px solid rebeccapurple; */
+        margin-top:-100px;
+        width:70%;
+        height:50vh;
+        background:#f5f6fa;
+         display: flex; 
+         justify-content: space-evenly;
+         border-radius:10px;
+       }
+
+       .inner_box{
+        width:23%;
+        padding-top:30px;
+       }
+
+       .inner_image{
+
+        width:30%;
+        border-radius:50%;
+       }
+
+       img{
+        box-shadow:1px 0 4px black;
+       }
+
+       input{
+
+        /* padding-inline:100px; */
+        /* padding-block:100px; */
+          margin-block:30px;
+          height:30px;
+          width:200px;
+          padding-left:20px;
+          /* margin-left:20px; */
+          margin-right:20px;
+          
+
+          border-radius:10px;
+          background: #f5f6fa;
+          border: none;
+
+       }
+       input:hover{
+
+        transition: all 1.15s ease-in-out;
+        height:40px;
+        border-radius:20px;
+        width:300px;
+       }
+
+       .button{
+
+        width:400px;
+        height:30px;
+        border: none;
+        border-radius:10px;
+        background-color:rgb(130, 229, 229);
+        color: black;
+       }
+
+       .button:hover{
+
+        transition: all 1.15s ease-in-out;
+        background: rgb(187, 224, 224);
+        color: rgb(95, 91, 91);
+        height:40px;
+        width:550px;
+        border-radius:20px;
+       }
+
+       .Con{
+
+        padding-left:50px;
+       }
+
+       .PPP{
+        padding-top:10px;
+       }
+
+      
+       
+
+       
+       
+    </style>
+</head>
+<body>
+
+   
+    <div class="navbar">
+
+        <div class="logo">
+            AFGHAN Bank
+        </div>
+
+
+        <div class="menu-toggle" onclick="togglem()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+
+        <div class="nav-links" id="nav-links">
+
+            <ul>
+                <li><a style="" id="A_" href="/Bank_home.html" >Home</a></li>
+                 <li><a id="A_"  href="/Bank_about.html" class="A_Tag">About</a></li>
+                  <li><a id="A_" href="/Bank_services.html" class="A_Tag">Services</a></li>
+                   <li><a id="A_" href="/Bank_contact.html" class="A_Tag">Contact us</a></li>
+                    <li><a id="A_" href="/Bank_login.html" class="A_Tag">Login</a></li>
+                     <li><a id="A_" href="/Bank_admin.html" class="A_Tag">Admin</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    <!-- <div class="container">
+
+        <div class="H"><h4 style="color:rgb(113, 113, 224);font-size: x-large;font-family: Arial, Helvetica, sans-serif;font-weight: bold;">AFGHAN Bank</h4></div>
+
+        <div>
+            <ul>
+                <li><a href="/Bank_about.html" class="A">Home</a></li>
+                <li><a href="/Bank_about.html" class="A">About</a></li>
+                <li><a href="/Bank_services.html" class="A">Services</a></li>
+                <li><a href="/Bank_contact.html" class="A"  >contact us</a></li>
+                <li style="font-size: x-large;" id="AA"   ><a href="/Bank_login.html" id="A" class="A"  style="font-size:x-large;">Login</a></li>
+                <li style="padding-right:30px;"><a href="/Bank_admin.html" class="A" style="font-size:x-large;">Admin</a></li>
+            </ul>
+        </div>
+    </div> -->
+
+    
+    <div class="container_1">
+        <div class="side_1">
+
+
+            <h2 class="Con">Contact Us</h2>
+             <h5 style="padding-bottom:10px;">Any Question or Remarks ? just write us a Message</h5>
+
+             <form action="">
+                <!-- <div style="display: flex;"> -->
+                    <!-- <label for="">Eamil</label> -->
+                    <input type="text" placeholder="Enter Valid Eamil Address">
+                
+                <!-- </div> -->
+
+                <!-- <div style="display:inline-block "> -->
+                    <!-- <label for="">Name</label> -->
+                    <input type="text" placeholder="Enter Your Name ">
+
+                <!-- </div> -->
+
+                <div>
+                    <button class="button">SUBMIT</button>
+                    
+                </div>
+             </form>
+<!-- 
+            <h2>Online</h2>
+            <h1>Banking</h1>
+            <h1>Your Can Find me in This website</h1> -->
+            
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aliquam minus nam! Esse facilis officiis quasi, eos </p> -->
+            <!-- <div class="Sing"><a href="" class="a_tag">SING IN</a></div> -->
+
+        </div>
+        <div class="side_2">
+
+            <div class="inner_side_2">
+                
+                <div class="inner_box">
+
+                    <img src="/image/Phone_image.jpg" alt="" class="inner_image">
+                    <h4 class="PPP">About Bank</h4>
+                    <p class="PPP">Running Guide</p>
+                    <p class="PPP">Workouts</p>
+                </div>
+
+
+                <div class="inner_box">
+
+                    <img src="/image/Runing_img.jpg" alt="" class="inner_image">
+                    <h4 class="PPP">PHONE (LANDLINE)</h4>
+                    <p class="PPP">0772417792</p>
+                    <p class="PPP">0771737485</p>
+                </div>
+
+                <div class="inner_box">
+
+                    <img src="/image/location_image.jpg" alt="" class="inner_image">
+                    <h4 class="PPP">OUR OFFICE LOCATION</h4>
+                    <p class="PPP">Kabul</p>
+                    <p class="PPP">Nanghrahar</p>
+                </div>
+            </div>
+            <!-- <img src="/BBBB.jpg" alt=""> -->
+        </div>
+    </div>
+
+
+
+     <script>
+
+        function togglem(){
+
+            var meanu=document.getElementById("nav-links");
+
+            if(meanu.style.display=='block'){
+
+                meanu.style.display='none';
+            }
+            else {
+
+                meanu.style.display='block'
+            }
+        }
+    </script>
+    
+</body>
+</html>

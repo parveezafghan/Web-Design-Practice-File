@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+
+            background: #efefef;;
+        }
+    
+    .D{
+
+        width:100%;
+        display: flex;
+        /* justify-content: center; */
+        background:#ffff;
+        position: relative;
+    }
+
+    ul{
+
+        display:flex;
+        justify-content: space-around;
+        position: relative;
+    }
+   
+    li{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+  ul li  a{
+        text-decoration: none;
+        padding-left:100px;
+      
+    }
+
+    
+
+    .B{
+
+        display:inline;
+        position: absolute;
+        overflow: hidden;
+        visibility: hidden;
+
+    }
+    .ad{
+
+        /* overflow:; */
+        visibility: visible;
+        
+    }
+
+    .A{
+
+        /* margin-left:-50px; */
+        margin-left:-50px;
+        margin-top:50px;
+        z-index:1;
+        /* position:relative; */
+        width:100px;
+        background:#FFFF;
+    }
+    
+    </style>
+</head>
+<body>
+
+
+    <div class="D">
+        <ul class="Ma">
+            <li><a href="">Home</a></li>
+            <li><a href="" id="one">Book
+                <ul class="B" id="add" >
+                    <li class="A">one</li>
+                    <li class="A">Two</li>
+                    <li class="A">Three</li>
+                </ul>
+            </a></li>
+            <li><a href="">about</a></li>
+            <li><a href="">Content</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('one').addEventListener('click',(e)=>{
+
+
+            e.preventDefault()
+
+         let add =document.getElementById('add');
+         add.classList.add('ad');
+
+        })
+    </script>
+    
+</body>
+</html>

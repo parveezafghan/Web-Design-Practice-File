@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #one{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+            width:100%;
+            flex-direction: column;
+        }
+        form{
+            width:60%;
+            height:60vh;
+            margin-left:40%;
+            margin-right:40%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #form-group, button{
+
+            margin-top:15px;
+        }
+    
+        small{
+            display:none;
+        }
+
+        form:hover{
+
+            box-shadow:0 0 15px indigo;
+        }
+
+        .error input{
+
+            border:2px solid red
+
+
+
+
+        }
+        .sm small{
+
+            display:inline-block;
+        }
+        #one{
+
+            width:80%;
+            height:80vh;
+            border: 2px solid red;
+        }
+        .success{
+
+            border:2px solid green;
+        }
+        input{
+
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="one">
+        <h1>Form Registration </h1>
+        <form id="form">
+            <div id="form-group">
+                <input type="text" id="name" placeholder="name"> <br>
+                <small>Error</small>
+            </div>
+
+
+            <div id="form-group">
+                <input type="text" id="last_name" placeholder="Last Name"><br>
+                <small>Error</small>
+            </div>
+
+
+            <div id="form-group">
+                <input type="password" id="password" placeholder="password"><br>
+                <small>Error</small>
+            </div>
+
+            <div id="form-group">
+
+                <input type="email" id="email" placeholder="Email">
+                <small>Error</small>
+            </div>
+
+            <div>
+                <button type="submit">submit</button>
+            </div>
+        </form>
+    </div>
+    
+
+    <script>
+     
+
+     let form=document.getElementById('form');
+     let name=document.getElementById('name');
+     let last_name=document.getElementById('last_name');
+     let password=document.getElementById('password');
+     let email=document.getElementById("email");
+
+    
+    
+
+       form.addEventListener('submit',(e)=>{
+
+
+        e.preventDefault();
+
+         
+         validate();
+       })
+
+       function validate(){
+
+        function error(element,message){
+            
+            let form_group=element.parentElement;
+            form_group.className="sm error";
+
+            form_group.querySelector('small').innerHTML=message;
+
+        }
+
+
+        function success(element){
+
+           let form_group=element.parentElement;
+           form_group.className="success";
+        }
+
+        if(name.value==""){
+
+            error(name,'Name is Required');
+        } else if(name.value.length<3){
+
+
+            error(name,"At least 3 Character Name");
+        }else if(name.value.match(/[0-9g]/)){
+
+
+            error(name,"Number not Required");
+        }
+        else{
+
+            success(name);
+        }
+
+
+
+        if(last_name.value==""){
+
+
+            error(last_name,"last Name Required");
+        }else if(last_name.value.length<3){
+
+            error(last_name,"At Least 3 character Name");
+        }else if(name.value.match(/[0-9g]/)){
+
+            error(last_name,"Number not Required");
+        }
+        else {
+
+            success(last_name);
+        }
+
+        if(password.value==""){
+
+            error(password,"passwrod Required");
+        }else if(password.value.length<5){
+
+            error(password,"password must Grader the 5 Character");
+        }else{
+
+            success(password);
+        }
+
+
+        if(email.value==""){
+
+            error(email,"Eamil is Required");
+        }else if(email.value.length<10){
+
+            error(email,"Emil character must Grader then 10 ");
+        }else if(!name.value.include("@")&& name.value.include("gamil")){
+
+            error(email,"@ and gamil Required");
+        }
+        else{
+
+            success(email);
+        }
+       }
+
+
+
+        
+      
+        // form.addEventListener('submit',(e)=>{
+
+        //     e.preventDefault();
+
+        //     validate();
+        // })
+
+
+        // function validate(){
+
+        //     function error(element,message){
+
+        //         let form_group=element.parentElement;
+        //         console.log(form_group);
+
+        //         form_group.className="sm error";
+
+        //         form_group.querySelector("small").innerHTML=message;
+        //     }
+
+        //     function success(element){
+
+        //         let form_group=element.parentElement;
+        //         form_group.className="success";
+
+        //     }
+
+        //     if(name.value===""){
+
+        //         error(name,"Name Failed is Required");
+        //     }
+        //     else if(name.value.length<3){
+
+        //         error(name,"Name Character Atleast 4 Character");
+        //     }
+        //     else if(name.value.match(/[0-9g]/)){
+
+
+        //         error(name,"Name must by Alpahabet not Numbers")
+        //     }
+        //     else{
+
+        //         success(name);
+        //     }
+
+
+        //     if(last_name.value==""){
+
+        //         error(last_name,"Last Name Field Required ");
+        //     }
+        //     else if(last_name.value<3){
+
+        //         error(last_name,"At Least 4 Chararcter Name ");
+        //     }
+        //     else if(last_name.value.match(/[0-9g]/)){
+
+        //         error(last_name,"Number is Not Required");
+        //     }
+        //     else{
+
+        //         success(last_name)
+        //     }
+
+
+
+        //     if(password.value==""){
+
+
+        //         error(password,"Password Is Required");
+        //     }
+        //     else if(password.value<5){
+
+        //         error(password,"At Least 6 Character Password");
+        //     }
+        //     else{
+
+        //         success(password)
+        //     }
+            
+        // }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+
+            padding:0;
+            margin: 0;
+
+        }
+
+        body{
+
+            background-color: rgb(187, 235, 235);
+            width:100%;
+            height:100vh;
+        
+        }
+
+        .main_bar{
+
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            width:100%;
+            height:40px;
+
+
+        }
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+            margin-right:20px;
+           
+
+        }
+
+        li{
+
+            padding:10px;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+        .Side{
+            padding-top:10px;
+            padding-left: 120px;
+        }
+
+
+        .main{
+
+            display: flex;
+            padding:100px;
+
+        }
+        .Side_1{
+
+            width:65%;
+        }
+
+        h5,h2,p{
+
+            padding:5px;
+        }
+       
+        .button{
+            padding-top:85px;
+            width:150px;
+            height:2px;
+            padding-bottom:60px;
+            
+        }
+       
+
+        .side_2{
+
+
+            width:35%;
+            /* background-color: rebeccapurple; */
+            border-radius:50%;
+        }
+
+        img{
+
+            border-radius:50%;
+            box-shadow:3px 3px 3px 10px rgb(191, 237, 237);
+
+        }
+        span{
+        color: rgb(235, 182, 85);
+        }
+
+        .BB{
+            width:80px;
+            height:40px;
+            color:black;
+            background-color: rgb(231, 203, 152);
+            border-radius:10px;
+        }
+       
+
+
+
+    </style>
+
+    <title>FORTFOLO</title>
+</head>
+<body>
+    
+    <div class="main_bar">
+        <div class="Side">BEN <span >ARD</span> PORT <span> FOLIO </span></div>
+        <div>
+            <ul style="list-style: none;">
+                <li> <a href="">HOME</a></li>
+                <li> <a href="">ABOUT</a></li>
+                <li><a href="">SERVICES</a> </li>
+                <Li><a href="">PORTFOLIO</a> </Li>
+                <li><a href="">CONTACT</a> </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="main">
+
+        <div class="side_1">
+            <h5>Hellow its me</h5>
+            <h2>Benard parveez AFGHAN</h2>
+            <h3> <span> I am a Fullstack Developer </span></h3>
+            <p>I can Build Fullstack Web Application use some technology like HTML CSS Boostrap JavaScipt Express js Mysql To make Responsive it </p>
+          <div class="button"> <span class="BB"> <a href="#">GET INFORMATION</a> </span> </div> 
+        </div>
+        <div class="side_2" >
+         <div class="image">  <img src="Banard.jpg"  alt="Error" width="300px" height="300px"> </div> 
+        </div>
+
+    </div>
+
+
+    <form action="" id="form">
+        <input type="text" placeholder="name" id="name">
+        
+        <button type="submit">submit</button>
+    </form>
+
+    <script>
+
+        document.getElementById('form').addEventListener("submit",(e)=>{
+
+
+            e.preventDefault();
+
+            console.log(document.getElementById('name'));
+
+
+        })
+    </script>
+</body>
+</html>
