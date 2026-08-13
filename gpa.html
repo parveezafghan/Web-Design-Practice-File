@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            width:100%;
+            height:20vh;
+            background-color:rgb(216, 211, 147)
+
+        }
+
+        .app{
+            width:30%;
+            height:50vh;
+            display: flex;
+            justify-content: center;
+            /* text-align: center; */
+            flex-direction: column;
+
+            margin-left:500px;
+        }
+        .header{
+
+            width:100%;
+            height:30vh;
+           
+            text-align: center;
+            margin-top:40px;
+
+
+            
+        }
+
+        .back{
+
+            width:100%;
+            text-align: center;
+        }
+
+        button{
+
+            border:none;
+            background-color: rgb(171, 222, 171);
+        }
+       
+    </style>
+</head>
+<body>
+
+
+    <div class="header">GPA Calculator</div>
+
+
+    <div class="app">
+        <input type="number" id="sub1" placeholder="Enter Sub1 Makrs"> <br>
+        <input type="number" id="sub2" placeholder="Enter Sub2 Marks "> <br>
+        <input type="number" id="sub3" placeholder="Enter Sub3 Marks "> <br>
+
+        <button onclick="calc()">Calculate GPA </button>
+
+        <h2><span id="Result"></span></h2>
+    </div>
+
+    <div class="back">
+        <button onclick="location.href=`Home.html`">Back To Home page</button>
+    </div>
+    
+
+    <script>
+        function calc(){
+
+            let Sub1=parseFloat(document.getElementById("sub1").value);
+            let Sub2=parseFloat(document.getElementById('sub2').value);
+            let Sub3=parseFloat(document.getElementById('sub3').value);
+
+
+            let Total=(Sub1+Sub2+Sub3);
+
+            let AVG=Total/3;
+            let GAP=0;
+            if(AVG=>90){
+
+
+                GAP=4.0;
+
+            }
+            else if(AVG=>80){
+
+                GAP=3.5;
+
+            }
+            else if(AVG=>70){
+
+                GPA=3.0;
+            }
+            else if(AVG=>60){
+
+
+                GPA=2.5;
+            }
+            else if(AVG=>55){
+                GPA=2.0;
+            }
+            else {
+
+
+                GPA=0;
+            }
+
+            document.getElementById('Result').textContent=GAP;
+        }
+    </script>
+</body>
+</html>

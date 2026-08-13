@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width:100%;
+            height:100vh;
+            background-color:rgb(228, 228, 158)
+
+        }
+        .app{
+
+            width:100%;
+            height:50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        button{
+            border:none;
+            background-color: rgb(181, 222, 181);
+        }
+        .header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top:20px;
+        
+        }
+       
+        .back{
+
+            display:flex;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="header">Calculator</div>
+   <div class="app">
+    <input type="number" id="num1" placeholder="Enter First Number"> <br>
+    <input type="number" id="num2" placeholder="Enter Second Number"> <br> <br>
+   <div class="app_">
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+    <button onclick="calculate('%')">%</button> <br>
+     <div>
+        <span id="Result"></span>
+     </div>
+    </div>
+   </div>
+
+   <div class="back">
+    <button  onclick="location.href=`Home.html`">Back To Home page</button>
+  </div>
+
+  <script>
+
+ 
+    function calculate(op){
+
+           let num1=parseFloat( document.getElementById('num1').value);
+
+    let num2=parseFloat( document.getElementById('num2').value);
+    let Result=0;
+
+        if(op=='+'){
+
+          Result=num1+num2
+        }else if(op==="-"){
+            
+            Result=num1-num2;
+
+        }else if(op==='*'){
+            Result=num1*num2;
+
+
+        }else if(op=="/"){
+
+            Result=num1/num2;
+
+        }else if(op=='%'){
+
+            Result=num1/num1;
+
+        }
+
+
+        console.log(Result);
+
+
+        document.getElementById('Result').textContent=Result;
+
+    }
+  </script>
+</body>
+</html>
