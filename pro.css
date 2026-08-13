@@ -1,0 +1,67 @@
+body{
+    margin:0px;
+}
+.con{
+
+    margin-bottom:0px ;
+    background-color:linen;
+
+    display: flex;
+    justify-content:space-around;
+    height:100px;
+
+}
+
+.one{
+
+    display: flex;
+    align-items: center;
+}
+
+
+.two ul {
+
+    display: flex;
+    /* justify-content:space-around; */
+    
+}
+ul li{
+
+    padding-right: 30px;
+    padding-top:15px;
+}
+
+
+.thre{
+
+    display: flex;
+    align-items:center;
+}
+
+
+.side {
+
+    
+    background-color:palegoldenrod;
+    display: flex;
+    /* justify-content: space-around;
+     */
+     align-items: center;
+
+    padding-top:10px;
+    height:600px;
+    width:130px;
+}
+
+
+.side ul  li{
+
+
+    display: flex;
+    /* background-color: orange; */
+    justify-content: space-around;
+    padding-top: 100px;
+    align-items: center;
+   
+}
+

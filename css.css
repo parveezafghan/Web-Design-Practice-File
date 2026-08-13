@@ -1,0 +1,77 @@
+.box{
+
+    background-color:palegoldenrod;
+    width:200px;
+    height:200px;
+    /*
+    transition-property:all;
+    transition-duration:2s;
+    transition-delay:1s;
+    */
+
+    transition:all 0.5s 3s steps(4);
+    float:left;
+
+}
+
+.box:hover{
+
+    background-color:palegreen;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    
+
+}
+
+
+.box1{
+
+    background-color:palevioletred;
+    width:200px;
+    height:200px;
+    /*  
+    transition-property:all;
+    transition-duration:2s;
+    transition-delay:1s;
+    */
+    transition:all 0.5s 1s steps(3);
+    float:left;
+
+}
+
+
+.box1:hover{
+
+    background-color:orange;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+
+
+}
+
+
+.box2{
+
+    width:200px;
+    height:200px;
+    background-color:yellow;
+    /*  
+    transition-property:all;
+    transition-duration:2s;
+    transition-delay:1s;
+    */
+    transition:all 0.5s 1s steps(4);
+    float:left;
+
+}
+
+
+.box2:hover{
+
+    background-color:fuchsia;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+}

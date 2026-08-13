@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .continer{
+            width:100%;
+            height:250px;
+            border:2px solid red;
+            display:grid;
+            grid-template-columns:repeat(4,100px);
+            grid-template-rows:repeat(4,100px);
+
+            grid-column-gap:300px;
+            grid-row-gap:20px;
+        }
+
+        .one{background-color: red;margin-left:10px;margin-top:10px; grid-column-start:1; grid-row-end:1; grid-column-start:2; grid-row-end:2}
+        .two{background-color: palegoldenrod; margin-top:10px;}
+        .three{background-color: palegreen;margin-top:10px}
+        .four{background-color:paleturquoise;margin-top:10px}
+        .five{background-color: green;margin-left:10px; margin-top:10px}
+        .sex{background-color: orange;}
+        .seven{background-color: rosybrown;}
+        .eight{background-color: black;}
+        
+    </style>
+</head>
+<body>
+    
+
+    <main class="continer">
+        <section class="_1 one">1</section>
+        <section class="_1 two">2</section>
+        <section class="_1 three">3</section>
+        <section class="_1 four">4</section>
+        <section class="_1 five">5</section>
+        <section class="_1 sex">6</section>
+        <section class="_1 seven">7</section>
+        <section class="_1 eight">8</section>
+    </main>
+</body>
+</html>

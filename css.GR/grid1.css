@@ -1,0 +1,62 @@
+body{
+
+    margin:0px;
+    
+}
+.first{
+
+    background-color:yellow;
+    display:flex;
+    justify-content:space-evenly;
+    padding:0px;
+    width:100%;
+    
+    
+}
+
+
+ul li a{
+
+ text-decoration-line:none;
+
+}
+.Top1{
+
+
+    display:flex;
+    width:500px;
+}
+.Top1 ul{
+
+    display: flex;
+
+    width:500px;
+}
+
+.Top1 ul li {
+
+    display: flex;
+
+}
+
+.Top1 ul li a{
+
+    justify-content: space-evenly;
+    padding:20px;
+}
+
+
+
+.Top2{display:flex;  width:500px}
+
+.Top2 ul{display: flex;width:500px}
+
+.Top2 ul li{display:flex}
+.Top2 ul li a{ padding:20px;}
+
+
+.Top3{display:flex;width:500px}
+.Top3 ul{display:flex; width:500px}
+
+.Top3 ul li{display:flex;}
+.Top3 ul li a{padding:20px;}

@@ -5,136 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <style>
-/*         
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        body{
-
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: aliceblue;
-        }
-
-        aside{
-            background-color: black;
-            width:200px;
-            padding:2rem;
-            height: 100vh;
-            position: fixed;
-            left:0;
-            top:0;
-        }
-        aside ul{
-
-            list-style: none;
-            line-height:50px;
-            text-align: center;
-        }
-        aside ul li a{
-
-            text-decoration: none;
-            color:white;
-            font-size: large;
-        }
-        aside header {
-             text-align: center;
-        }
-
-        section{
-
-            width:100%;
-            height:100vh;
-        }
-
-        section button{
-
-            margin-top:10px;
-            margin-left:10px;
-        }
-
-        .hide{
-
-            left:-400px;
-        } */
-
-        *{
-            margin:0;
-        }
-        aside{
-            background-color:black;
-            width:200px;
-            height:100vh;
-            margin:0;
-            position: fixed;
-            top:0;
-            left:0;
-
-        }
-        aside ul{
-
-            list-style: none;
-            
-        }
-        aside ul li a{
-
-            text-decoration: none;
-            font-size: large;
-            font-weight: 100;
-            
-        }
-        aside ul li{
-            padding-top:30px;
-        }
-        aside header{
-            text-align: center;
-        }
-
-        .hide{
-
-            left:-400px;
-        }
-    </style>
+    <link rel="stylesheet" href="pro.css">
 </head>
-<body style="background-image: url(pa.jpg);mask-repeat: no-repeat; background-size:cover;background-position:center ;">
+<body>
+
+    <div class="con">
+
+        <div class="one">New Website</div>
+        <div class="two">
+            <ul >
+                <li>New</li>
+                <li>Sport</li>
+                <li>Entertiment</li>
+                <li>Technolog</li>
+                <li>Bussiness</li>
+
+            </ul>
+        </div>
+
+        <div class="thre">
+            <ul>Common Technic</ul>
+            <ul>Conmon Common Edu</ul>
+        </div>
+    </div>
+
+    <div class="side">
+        <ul>
+            <li>Home</li>
+            <li>serice</li>
+            <li>cotace us</li>
+            <li>About us</li>
+            <li>phone</li>
+        </ul>
+    </div>
     
-    <main>
-        <aside>
-           <header> <button ondblclick="hide()">Close Button </button></header>
-           <ul>
-            <li> <a href="">Dishbord</a></li>
-            <li><a href="">Home</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Contact us </a></li>
-            <li><a href="">About us</a></li>
-            <li><a href="">setting </a></li>
-            <li><a href="">home Setting </a></li>
-            <li><a href=""> Gelary </a></li>
-            <li><a href="">hone Number </a></li>
-           </ul>
-        </aside>
-
-        <section>
-             <button ondblclick="show()">Open BUtton</button>
-        </section>
-    </main>
-
-    <script > 
-
-    function hide(){
-
-        document.querySelector("aside").setAttribute("class","hide");
-
-    }
-
-    function show(){
-
-        document.querySelector("aside").removeAttribute("class");
-    }
-        
-    </script>
 </body>
 </html>

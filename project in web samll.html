@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         :root{
+            --color_for:orange;
+            --font-size-for:15px;
+         }
+        body{
+
+            margin:0;
+            padding:0;
+            font-family:arial;
+        }
+        #cont{
+            border:2px solid orange;
+            width:1000px;
+
+            margin:0px auto;
+        }
+        @media screen and (max-width:250px){
+
+
+            #cont{
+
+                width:100%;
+            }
+        }
+        #top_bar{
+            
+            background-color:yellow;
+            color:red;
+            text-align: center;
+            margin-bottom:0px;
+            padding:15px;
+        }
+        #menu_bar{
+
+            background-color:orange;
+
+        }
+        #menu_bar ul{
+             
+            margin:0;
+        
+
+        }
+        #menu_bar ul li{
+
+            display:inline;
+        }
+        #menu_bar ul li a{
+
+            text-decoration-line:none;
+
+        }
+        #menu_bar ul li{
+
+            display:inline-block;
+            padding:15px;
+            
+        }
+        #content{
+
+            width:800px;
+            text-align:justify;
+            padding-left:10px;
+            float:left;
+            font-size:var(--font-size-for)
+        
+        }
+        #content span{
+
+            color:var(--color_for);
+            font-size:50px;
+        }
+
+        @media screen and (max-width:270px){
+
+            #content{
+
+                width:100%;
+            }
+        }
+        #side_bar{
+
+            float:right;
+            background-color:aliceblue;
+            width:100px;
+            height:300px;
+        }
+        #side_bar ul{
+
+            list-style:none;
+            padding:0px;
+        }
+        #side_bar ul li a{
+
+            text-decoration-line:none;
+            color:orangered;
+            display:block;
+            padding:15px;
+        }
+        #side_bar ul li a:hover{
+
+            background-color:var(--color_for);
+
+        }
+        #footer{
+
+            clear:both;
+            background-color:var(--color_for);
+            text-align:center;
+            padding:10px;
+            
+        }
+        #footer div{
+
+            margin:0px;
+        }
+
+        #menu_bar ul li a:hover{
+
+            background-color:var(--color_for);
+
+        }
+        
+       
+    </style>
+</head>
+<body>
+
+    <div id="cont">
+
+        <div id="top_bar">
+            <h1>Welcome to parveez Afghan website</h1>
+        </div>
+
+        <div id="menu_bar">
+
+            <ul style="text-align: center;">
+                <li> <a href="#">Home</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+
+            <h1> <span>D</span>esign</h1>
+            <div>Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
+                To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.
+                Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme.
+                </div>
+        </div>
+        <div id="side_bar">
+
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+        </div>
+        <div id="footer">
+            <div>
+                all Right Reservie
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
